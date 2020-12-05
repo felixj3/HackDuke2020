@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  subject: MyString
+  number: MyString
+  grade: MyString
+  availability: MyString
+  pay: MyString
+
+two:
+  subject: MyString
+  number: MyString
+  grade: MyString
+  availability: MyString
+  pay: MyString
