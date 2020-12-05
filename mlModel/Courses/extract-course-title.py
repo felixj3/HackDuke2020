@@ -26,7 +26,7 @@ for majorStr in dataByMajors:
 
     majors.append(majorInfo)
 
-    courses = reSplit(r'^\d{3}.*?\.', majorStr)
+    courses = reSplit(r'^\d{3}\S*?\.', majorStr)
     # coursesIdx = []
 
     # majorStr += '\n999.'
@@ -49,7 +49,7 @@ for majorStr in dataByMajors:
 
 
 
-with open('output.json', 'w') as f:
+with open('mlModel/Courses/output.json', 'w') as f:
     json.dump(majors, f)
 
 pass
