@@ -27,7 +27,7 @@ class HomeController < ApplicationController
     data.each do |k,v|
       # puts "key: #{k} value: #{v}"
       v.each do |c|
-        puts c
+        # puts c
         @clubs << c
       end
     end
@@ -35,7 +35,7 @@ class HomeController < ApplicationController
     puts("----------------------------------------\n")
     puts("inside getClubs\n")
     @clubs.each do |c|
-      puts c
+      # puts c
     end
     @clubs.sort!
     @clubs.uniq!
