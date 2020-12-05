@@ -26,7 +26,7 @@ for majorStr in dataByMajors:
 
     majors.append(majorInfo)
 
-    courses = reSplit(r'^\d{3}\S*?\.', majorStr)
+    courses = reSplit(r'^\d{3}\S*?\.\s', majorStr)
     # coursesIdx = []
 
     # majorStr += '\n999.'
@@ -38,11 +38,11 @@ for majorStr in dataByMajors:
     #     courses.append(majorStr[coursesIdx[i] : coursesIdx[i+1]])
 
     for i in courses:
-        q = re.match(r'(\d{3}\S*?)\. (.*?\.)', i)
+        q = re.match(r'(\d{3}\S*?)\. (.*?\.\s)', i)
 
         if q:
 
-            info = [q.group(1), q.group(2)]
+            info = [q.group(1), q.group(2)[:-1]]
 
             majorInfo[1].append(info)
 

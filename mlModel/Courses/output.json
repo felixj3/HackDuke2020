@@ -3598,9 +3598,9 @@
             ["591", "Independent Study."],
             ["623", "Practicum and Seminar in Gifted Education."],
             ["690S", "Selected Topics Seminar."],
-            ["583S", "Energy and U."],
-            ["663S", "Energy and U."],
-            ["583S", "Energy and U."]
+            ["583S", "Energy and U.S."],
+            ["663S", "Energy and U.S."],
+            ["583S", "Energy and U.S."]
         ]
     ],
     [
@@ -3865,7 +3865,7 @@
             ],
             ["532S", "Chaucer and His Contexts."],
             ["536S", "Shakespeare: Special Topics."],
-            ["537S", "Shakespeare & Co."],
+            ["537S", "Shakespeare & Co.: English Renaissance Drama."],
             [
                 "538S",
                 "Special Topics in Renaissance Prose and Poetry: 1500 to 1660."
@@ -4145,7 +4145,7 @@
                 "581",
                 "Global Environmental Health Problems: Principles and Case Studies."
             ],
-            ["583S", "Energy and U."],
+            ["583S", "Energy and U.S."],
             ["585", "Fisheries Biogeography and Ecology."],
             ["585A", "Fisheries Biogeography and Ecology."],
             ["590", "Special Topics."],
@@ -4237,7 +4237,7 @@
             ["253S", "Pursuit of Purpose: Exploring What to Be and Why."],
             [
                 "255",
-                "America in the World Economy: The Law, Politics, and Economics of U."
+                "America in the World Economy: The Law, Politics, and Economics of U.S."
             ],
             ["2015", "R, SS One course."],
             ["258", "Moral Dilemmas in Philosophy and Literature."],
@@ -4320,15 +4320,15 @@
             ["646S", "Strategic Storytelling: Narratives for Development."],
             [
                 "252",
-                "America in the World Economy: The Law, Politics, and Economics of U."
+                "America in the World Economy: The Law, Politics, and Economics of U.S."
             ],
             [
                 "255",
-                "America in the World Economy: The Law, Politics, and Economics of U."
+                "America in the World Economy: The Law, Politics, and Economics of U.S."
             ],
             [
                 "254",
-                "America in the World Economy: The Law, Politics, and Economics of U."
+                "America in the World Economy: The Law, Politics, and Economics of U.S."
             ]
         ]
     ],
@@ -4464,8 +4464,8 @@
             ["232", "Gender and Language."],
             ["235S", "Clinical Issues for the LGBTQ Community."],
             ["237", "African American Women and History."],
-            ["239", "Women, Gender, and Sexuality in U."],
-            ["239D", "Women, Gender, and Sexuality in U."],
+            ["239", "Women, Gender, and Sexuality in U.S."],
+            ["239D", "Women, Gender, and Sexuality in U.S."],
             ["241", "Gender, Work, and Organizations."],
             ["245S", "Women in Visual Arts."],
             [
@@ -4599,7 +4599,7 @@
             ["601S", "Debates in Women\u2019s Studies."],
             ["611S", "Film Feminisms."],
             ["615S", "The #Selfie."],
-            ["374", "Women, Gender, and Sexuality in U."]
+            ["374", "Women, Gender, and Sexuality in U.S."]
         ]
     ],
     [
@@ -5045,7 +5045,7 @@
                 "Gateway Seminar: History of Intimacy: Family, Friendship, Romance."
             ],
             ["172S", "Gateway Seminar: History of Calypso."],
-            ["174S", "Gateway Seminar: Regime Change/U."],
+            ["174S", "Gateway Seminar: Regime Change/U.S."],
             ["175S", "Gateway Seminar - The United States and the World."],
             [
                 "176S",
@@ -5146,7 +5146,7 @@
             ["251", "Jewish History, 1492 to the Present."],
             [
                 "252",
-                "America in the World Economy: The Law, Politics, and Economics of U."
+                "America in the World Economy: The Law, Politics, and Economics of U.S."
             ],
             ["2015", "R, SS One course."],
             [
@@ -5200,7 +5200,7 @@
             ["294", "Jews and Muslims, Judaism and Islam."],
             ["295", "World War II and French Film."],
             ["297", "The Holocaust."],
-            ["299", "Women and Popular Culture in U."],
+            ["299", "Women and Popular Culture in U.S."],
             [
                 "301S",
                 "Influential Scientists and Policy Leaders in Science Policy."
@@ -5290,7 +5290,7 @@
                 "343",
                 "History of Modern America: The United States from 1930 to present."
             ],
-            ["344", "History of U."],
+            ["344", "History of U.S."],
             ["345", "North American Environmental History."],
             ["346S", "Politics of Sexuality."],
             ["347", "African Americans Since the Civil War."],
@@ -5301,7 +5301,7 @@
                 "The Connection between Human Rights, Memory and How Societies Create Memorials."
             ],
             ["351S", "Islam in the Americas."],
-            ["352", "Immigrant Dreams, U."],
+            ["352", "Immigrant Dreams, U.S."],
             [
                 "353A",
                 "From Transition to Indignation: Social Movements in Spain 1977-2013."
@@ -5335,8 +5335,8 @@
                 "France and Africa: The Politics and Culture of (Post-)Coloniality."
             ],
             ["373", "American Indian History Since 1806."],
-            ["374", "Women, Gender, and Sexuality in U."],
-            ["374D", "Women, Gender, and Sexuality in U."],
+            ["374", "Women, Gender, and Sexuality in U.S."],
+            ["374D", "Women, Gender, and Sexuality in U.S."],
             [
                 "375",
                 "United States Foreign Policy I: From World War II to Vietnam War."
@@ -5400,7 +5400,7 @@
             ],
             ["399A", "Duke Summer Program: Oxford."],
             ["403S", "Politics and Obligations of Memory."],
-            ["404", "Women and the Law in U."],
+            ["404", "Women and the Law in U.S."],
             ["405", "What Machiavelli Really Says."],
             ["407", "Soviet and Post-Soviet Economic History."],
             ["411S", "Historicizing Whiteness."],
@@ -5430,7 +5430,7 @@
             ],
             ["457S", "Capstone Seminar: Maroon Societies in America."],
             ["460S", "Capstone Seminar: The Black Death and Medieval Society."],
-            ["461S", "Capstone Seminar: Clothing and U."],
+            ["461S", "Capstone Seminar: Clothing and U.S."],
             [
                 "462S",
                 "Capstone Seminar: Heresy and Inquisition in the Middle Ages."
@@ -5440,7 +5440,10 @@
                 "464S",
                 "Capstone Seminar: Geopolitics of War and Empire in the Modern World."
             ],
-            ["465S", "Capstone Seminar: History of the U."],
+            [
+                "465S",
+                "Capstone Seminar: History of the U.S./Mexico Border, 18th to 20th Centuries."
+            ],
             [
                 "467S",
                 "Capstone Seminar: Russia-USSR-Russia: History of Communism."
@@ -5659,7 +5662,7 @@
                 "Environment and Conflict: The Role of the Environment in Conflict and Peacebuilding."
             ],
             ["238S", "History of Political Nonviolence."],
-            ["239D", "Women, Gender, and Sexuality in U."],
+            ["239D", "Women, Gender, and Sexuality in U.S."],
             [
                 "246S",
                 "Civil/Human Rights Activism: In the Spirit of Pauli Murray."
@@ -5731,7 +5734,7 @@
                 "343",
                 "History of Modern America: The United States from 1930 to present."
             ],
-            ["344", "History of U."],
+            ["344", "History of U.S."],
             ["345", "African Americans, Mass Incarceration and Citizenship."],
             [
                 "346S",
@@ -5745,7 +5748,7 @@
             ["348", "The Civil Rights Movement."],
             ["349S", "Racial Justice in the 20th Century US and South Africa."],
             ["350S", "Documenting Black Experiences."],
-            ["352", "Immigrant Dreams, U."],
+            ["352", "Immigrant Dreams, U.S."],
             ["360S", "Feminist Activism: Social Movements."],
             ["361", "Money, Sex, Power."],
             ["363", "International Human Rights in World Politics."],
@@ -5787,12 +5790,12 @@
             ["603", "The Palestinian-Israeli Conflict in Literature and Film."],
             ["642S", "Global Inequality Research Seminar."],
             ["660", "Global Mental Health."],
-            ["239D", "Women, Gender, and Sexuality in U."],
-            ["344", "History of U."],
-            ["352", "Immigrant Dreams, U."],
-            ["374D", "Women, Gender, and Sexuality in U."],
-            ["220", "Immigrant Dreams, U."],
-            ["344", "History of U."],
+            ["239D", "Women, Gender, and Sexuality in U.S."],
+            ["344", "History of U.S."],
+            ["352", "Immigrant Dreams, U.S."],
+            ["374D", "Women, Gender, and Sexuality in U.S."],
+            ["220", "Immigrant Dreams, U.S."],
+            ["344", "History of U.S."],
             [
                 "101L",
                 "Technical and Social Analysis of Information and the Internet."
@@ -6603,7 +6606,10 @@
                 "412S",
                 "Mayas, Aztecs, and Incas: The World According to the Indigenous People of Latin America."
             ],
-            ["465S", "Capstone Seminar: History of the U."],
+            [
+                "465S",
+                "Capstone Seminar: History of the U.S./Mexico Border, 18th to 20th Centuries."
+            ],
             [
                 "490S",
                 "Special Topics in US Latina/o Literatures and Cultural Studies."
@@ -6616,8 +6622,7 @@
                 "495S",
                 "Latino/as in the Global South Capstone - Global/Local Contexts."
             ],
-            ["690", "Special Topics in Latino Studies in the Global South."],
-            ["465S", "Capstone Seminar: History of the U."]
+            ["690", "Special Topics in Latino Studies in the Global South."]
         ]
     ],
     [
@@ -6665,7 +6670,7 @@
             ["305S", "Italian Sociolinguistics."],
             ["306S", "Korean Sociolinguistics."],
             ["308S", "Bilingualism."],
-            ["309S", "Spanish in the U."],
+            ["309S", "Spanish in the U.S."],
             ["310", "Translating Spanish-English and English-Spanish."],
             ["315S", "Acquisition of Japanese as a Second Language."],
             [
@@ -7119,19 +7124,19 @@
             ],
             [
                 "252",
-                "America in the World Economy: The Law, Politics, and Economics of U."
+                "America in the World Economy: The Law, Politics, and Economics of U.S."
             ],
             [
                 "255",
-                "America in the World Economy: The Law, Politics, and Economics of U."
+                "America in the World Economy: The Law, Politics, and Economics of U.S."
             ],
             [
                 "254",
-                "America in the World Economy: The Law, Politics, and Economics of U."
+                "America in the World Economy: The Law, Politics, and Economics of U.S."
             ],
             [
                 "255",
-                "America in the World Economy: The Law, Politics, and Economics of U."
+                "America in the World Economy: The Law, Politics, and Economics of U.S."
             ],
             ["105L", "Laboratory Calculus and Functions I."],
             ["106L", "Laboratory Calculus and Functions II."],
@@ -7454,7 +7459,7 @@
                 "632S",
                 "Special Topics in Renaissance Prose and Poetry: 1500 to 1660."
             ],
-            ["637S", "Shakespeare & Co."],
+            ["637S", "Shakespeare & Co.: English Renaissance Drama."],
             ["642", "Medieval Fictions."],
             ["647S", "Latin Palaeography."],
             ["648", "The Legacy of Greece and Rome."],
@@ -8397,9 +8402,12 @@
             ["253S", "Christian Ethics and Modern Society."],
             [
                 "255",
-                "America in the World Economy: The Law, Politics, and Economics of U."
+                "America in the World Economy: The Law, Politics, and Economics of U.S."
             ],
-            ["2015", "R, SS Introduction to the history and key issues in U."],
+            [
+                "2015",
+                "R, SS Introduction to the history and key issues in U.S."
+            ],
             ["257", "Latin American Wars of Independence."],
             ["262", "The Holocaust."],
             [
@@ -8494,7 +8502,7 @@
                 "351",
                 "Economic History and Modernization of the Islamic Middle East."
             ],
-            ["352S", "U."],
+            ["352S", "U.S."],
             ["353", "Globalization of Democracy."],
             ["354", "Politics in the Developing World."],
             ["355", "Comparative Health Care Systems."],
@@ -8580,7 +8588,7 @@
             ],
             ["402S", "Origins of WWI and WWII in Europe."],
             ["406S", "South African Life Histories."],
-            ["415", "U."],
+            ["415", "U.S-Russia Relations: 1991-2016."],
             ["427S", "World in Your Hand."],
             ["428S", "International Conflict Resolution."],
             [
@@ -8747,7 +8755,7 @@
             ["660S", "Theories of International Conflict."],
             ["661S", "Courts, Wars, Legacies of Wars."],
             ["662S", "Problems in International Politics."],
-            ["663S", "Energy and U."],
+            ["663S", "Energy and U.S."],
             ["664S", "Leaders, Nations, and War."],
             ["665S", "Theory and Practice of National Security."],
             ["667S", "American Civil-Military Relations."],
@@ -9102,7 +9110,7 @@
             ["217SA", "Theory and Practice: People, Places and Policy Cases."],
             ["218S", "Conflict Analysis in Africa (Case Studies)."],
             ["219D", "The Modern Regulatory State."],
-            ["220", "Immigrant Dreams, U."],
+            ["220", "Immigrant Dreams, U.S."],
             ["222", "International Political Economy."],
             ["223", "Global Russia."],
             [
@@ -9159,7 +9167,7 @@
             ["253", "Martin Luther King and the Prophetic Tradition."],
             [
                 "254",
-                "America in the World Economy: The Law, Politics, and Economics of U."
+                "America in the World Economy: The Law, Politics, and Economics of U.S."
             ],
             ["2015", "R, SS One course."],
             ["256", "Social Innovation."],
@@ -9277,7 +9285,7 @@
                 "History of Modern America: The United States from 1930 to present."
             ],
             ["343", "Journalism in the Age of Data."],
-            ["344", "History of U."],
+            ["344", "History of U.S."],
             ["345", "Genocide and Human Rights."],
             ["346S", "Family Rights/Human Rights."],
             [
@@ -9291,8 +9299,8 @@
                 "351A",
                 "The Economic and Political History of the European Union."
             ],
-            ["352", "U."],
-            ["353S", "U."],
+            ["352", "U.S-Russia Relations: 1991-2016."],
+            ["353S", "U.S."],
             ["354", "Politics in the Developing World."],
             ["355A", "Political Economy of Immigration."],
             ["356A", "Globalization and Deglobalization."],
@@ -9421,7 +9429,7 @@
             ["580S", "Water Cooperation and Conflict."],
             ["581S", "International Environmental Regimes."],
             ["582", "Global Environmental Health: Economics and Policy."],
-            ["583S", "Energy and U."],
+            ["583S", "Energy and U.S."],
             ["584", "Resource & Environmental Economics II."],
             ["585", "Climate Change Economics and Policy."],
             ["590", "Advanced Topics in Public Policy."],
@@ -10193,7 +10201,7 @@
             ["306A", "Language, Culture, and Health in Costa Rica."],
             ["307S", "Issues of Education and Immigration."],
             ["308S", "Latinx Voices in Duke, Durham, and Beyond."],
-            ["309S", "Spanish in the U."],
+            ["309S", "Spanish in the U.S."],
             ["310", "Translating Spanish-English and English-Spanish."],
             [
                 "311",
@@ -10638,7 +10646,7 @@
             ["402A", "Advanced Russian: Readings, Translation, and Syntax."],
             ["407", "Soviet and Post-Soviet Economic History."],
             ["410", "Leadership in International Relations."],
-            ["415", "U."],
+            ["415", "U.S-Russia Relations: 1991-2016."],
             ["433S", "Soviet Life through the Camera\u2019s Lens."],
             ["438AS", "Neuroscience and Multilingualism."],
             ["439S", "Neuroscience and Multilingualism."],
