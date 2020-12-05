@@ -1,0 +1,2 @@
+class BecomeTutorController < ApplicationController
+end

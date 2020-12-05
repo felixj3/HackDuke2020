@@ -1,0 +1,2 @@
+class RequestTutorController < ApplicationController
+end
