@@ -10,10 +10,10 @@ def reSplit(query, text):
     return out
 
 
-with open('courses.txt') as f:
+with open('mlModel/Courses/courses.txt') as f:
     data = f.read()
 
-dataByMajors = reSplit(r'^Courses in .*?(.+)\n', data)
+dataByMajors = reSplit(r'^Courses in .*?\(.+\)\n', data)
 
 majors = []
 
@@ -26,7 +26,7 @@ for majorStr in dataByMajors:
 
     majors.append(majorInfo)
 
-    courses = reSplit(r'^\d{3}.*?\.', majorStr)
+    courses = reSplit(r'^\d{3}\S*?\.\s', majorStr)
     # coursesIdx = []
 
     # majorStr += '\n999.'
@@ -38,18 +38,18 @@ for majorStr in dataByMajors:
     #     courses.append(majorStr[coursesIdx[i] : coursesIdx[i+1]])
 
     for i in courses:
-        q = re.match(r'(\d{3}.*?)\. (.*?\.)', i)
+        q = re.match(r'(\d{3}\S*?)\. (.*?\.\s)', i)
 
         if q:
 
-            info = [q.group(1), q.group(2)]
+            info = [q.group(1), q.group(2)[:-1]]
 
             majorInfo[1].append(info)
 
 
 
 
-with open('output.json', 'w') as f:
+with open('mlModel/Courses/output.json', 'w') as f:
     json.dump(majors, f)
 
 pass
