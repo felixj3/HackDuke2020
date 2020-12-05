@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get "assist" => "become_tutor#index"
   get "study" => "study#index"
   post "/request" => "request_tutor#post"
+  get "profile" => "home#profile"
   # get "users/sign_in", to: "static_pages#mission", as: "mission"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
