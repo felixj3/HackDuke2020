@@ -7,15 +7,18 @@ class HomeController < ApplicationController
     puts("----------------------------------------\n")
     puts("pre")
     temp = File.open("#{Rails.root}/mlModel/Parsers/clubs.json").read # relative to current location of file
-    # render :json => temp
+    render :json => temp
     data = JSON.parse(temp)
     @clubs = Array.new
     data.each do |k,v|
       puts "key: #{k} value: #{v}"
-      @clubs << v
+      v.each do |c|
+        @clubs << c
+      end
     end
     
     puts("----------------------------------------\n")
+    puts("felix")
     @clubs.each do |c|
       puts c
     end
