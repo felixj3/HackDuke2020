@@ -2914,10 +2914,19 @@
 			}
 
 /* Banner */
+	.banner.become-tutor-banner {
+		background-image: image-url('banner7.jpg');
+	}
 
-	#banner {
+	.banner.request-tutor-banner {
+		background-image: image-url('banner7.jpg');
+	}
+
+	
+
+	.banner {
 		padding: 8em 0 9em 0;
-		background-image: url(../../images/banner.jpg);
+		background-image: image-url('banner_home.jpg');
 		background-size: cover;
 		background-position: bottom;
 		background-attachment: fixed;
@@ -2926,7 +2935,7 @@
 		position: relative;
 	}
 
-		#banner:before {
+		.banner:before {
 			content: '';
 			background: rgba(75, 75, 93, 0.85);
 			position: absolute;
@@ -2936,14 +2945,14 @@
 			left: 0;
 		}
 
-		#banner .inner {
+		.banner .inner {
 			border-top: 2px solid rgba(255, 255, 255, 0.2);
 			position: relative;
 			z-index: 10005;
 			padding-top: 8em;
 		}
 
-		#banner h1 {
+		.banner h1 {
 			font-size: 3.5em;
 			font-weight: 400;
 			color: #fff;
@@ -2952,25 +2961,29 @@
 			padding: 0;
 		}
 
-		#banner h3 {
+		.banner h2 {
+			color: #fff;
+		}
+
+		.banner h3 {
 			font-weight: 400;
 			color: #fff;
 			margin: 0;
 			font-size: 1.5em;
 		}
 
-		#banner .icon {
+		.banner .icon {
 			color: #6cc091;
 			font-size: 2em;
 		}
 
-		#banner p {
+		.banner p {
 			font-size: 1em;
 			color: rgba(255, 255, 255, 0.55);
 			margin-bottom: 1.75em;
 		}
 
-		#banner .flex {
+		.banner .flex {
 			-ms-flex-pack: center;
 			-moz-justify-content: center;
 			-webkit-justify-content: center;
@@ -2980,27 +2993,27 @@
 			margin: 0 auto 4em auto;
 		}
 
-			#banner .flex div {
+			.banner .flex div {
 				border-right: 2px solid rgba(255, 255, 255, 0.2);
 				padding: 0 8em;
 			}
 
-				#banner .flex div:last-child {
+				.banner .flex div:last-child {
 					border: none;
 					padding-right: 0;
 				}
 
-				#banner .flex div:first-child {
+				.banner .flex div:first-child {
 					padding-left: 0;
 				}
 
-				#banner .flex div p {
+				.banner .flex div p {
 					margin: 0;
 				}
 
 		@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
 
-			#banner {
+			.banner {
 				background-attachment: scroll;
 			}
 
@@ -3008,7 +3021,7 @@
 
 		@media screen and (max-width: 1680px) {
 
-			#banner .flex div {
+			.banner .flex div {
 				padding: 0 6em;
 			}
 
@@ -3016,23 +3029,23 @@
 
 		@media screen and (max-width: 1280px) {
 
-			#banner {
+			.banner {
 				padding: 7em 0 6em 0;
 			}
 
-				#banner .inner {
+				.banner .inner {
 					padding-top: 6em;
 				}
 
-				#banner h1 {
+				.banner h1 {
 					font-size: 3em;
 				}
 
-				#banner h3 {
+				.banner h3 {
 					font-size: 1.25em;
 				}
 
-				#banner .flex div {
+				.banner .flex div {
 					padding: 0 3em;
 				}
 
@@ -3040,24 +3053,24 @@
 
 		@media screen and (max-width: 980px) {
 
-			#banner {
+			.banner {
 				background-attachment: scroll;
 				padding: 5em 0 4em 0;
 			}
 
-				#banner .inner {
+				.banner .inner {
 					padding-top: 4em;
 				}
 
-				#banner h1 {
+				.banner h1 {
 					font-size: 2.5em;
 				}
 
-				#banner h3 {
+				.banner h3 {
 					font-size: 1.25em;
 				}
 
-				#banner .flex div {
+				.banner .flex div {
 					font-size: .85em;
 					padding: 0 1.5em;
 				}
@@ -3066,23 +3079,23 @@
 
 		@media screen and (max-width: 736px) {
 
-			#banner {
+			.banner {
 				padding: 4em 0 3em 0;
 			}
 
-				#banner .inner {
+				.banner .inner {
 					padding-top: 3em;
 				}
 
-				#banner h1 {
+				.banner h1 {
 					font-size: 2em;
 				}
 
-				#banner h3 {
+				.banner h3 {
 					font-size: 1.25em;
 				}
 
-				#banner .flex {
+				.banner .flex {
 					-moz-flex-direction: column;
 					-webkit-flex-direction: column;
 					-ms-flex-direction: column;
@@ -3090,7 +3103,7 @@
 					margin: 0 auto 2em auto;
 				}
 
-					#banner .flex div {
+					.banner .flex div {
 						font-size: .85em;
 						padding: 0;
 						border: none;
@@ -3101,7 +3114,7 @@
 
 		@media screen and (max-width: 480px) {
 
-			#banner h1 {
+			.banner h1 {
 				font-size: 1.5em;
 			}
 
