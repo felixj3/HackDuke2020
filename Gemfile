@@ -24,6 +24,7 @@ gem 'jbuilder', '~> 2.7'
 
 # added by anni
 gem "font-awesome-rails"
+gem 'devise', '~> 4.7', '>= 4.7.3'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
