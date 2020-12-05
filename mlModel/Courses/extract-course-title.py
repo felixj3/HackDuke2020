@@ -10,10 +10,10 @@ def reSplit(query, text):
     return out
 
 
-with open('courses.txt') as f:
+with open('mlModel/Courses/courses.txt') as f:
     data = f.read()
 
-dataByMajors = reSplit(r'^Courses in .*?(.+)\n', data)
+dataByMajors = reSplit(r'^Courses in .*?\(.+\)\n', data)
 
 majors = []
 
@@ -38,7 +38,7 @@ for majorStr in dataByMajors:
     #     courses.append(majorStr[coursesIdx[i] : coursesIdx[i+1]])
 
     for i in courses:
-        q = re.match(r'(\d{3}.*?)\. (.*?\.)', i)
+        q = re.match(r'(\d{3}\S*?)\. (.*?\.)', i)
 
         if q:
 
