@@ -2922,7 +2922,13 @@
 		background-image: image-url('book1.jpg');
 	}
 	
-
+	.banner.find-study-room {
+		background-image: image-url('studyroom.jpg');
+	}
+	.banner.subbanner h2 {
+		position: relative;
+		color: #fff;
+	}
 	
 
 	.banner {
@@ -2962,9 +2968,7 @@
 			padding: 0;
 		}
 
-		.banner h2 {
-			color: #fff;
-		}
+		
 
 		.banner h3 {
 			font-weight: 400;
