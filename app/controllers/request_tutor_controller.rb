@@ -6,5 +6,6 @@ class RequestTutorController < ApplicationController
             puts "key: #{k} value: #{v}"
         end
         puts(params[:name])
+        
     end
 end
