@@ -7,7 +7,7 @@ class StudyController < ApplicationController
             cnt = cnt+1
         end    
         room = Array.new(cnt)
-        
+
     end
 
 end
