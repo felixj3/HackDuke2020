@@ -5,9 +5,11 @@ one:
   capacity: 1
   current_number_student: 1
   major: MyString
+  description: MyString
 
 two:
   rank: 1
   capacity: 1
   current_number_student: 1
   major: MyString
+  description: MyString

@@ -8,10 +8,6 @@
 	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 */
 
-#assist{
-	padding-top:50px;
-}
-
 /* Reset */
 
 	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
@@ -2158,7 +2154,7 @@
 	.box {
 		border: solid 1px #dbdbdb;
 		margin-bottom: 2em;
-		padding: 1.5em;
+		padding: 0em;
 	}
 
 		.box > :last-child,
@@ -3207,6 +3203,163 @@
 			
 			overflow: hidden;
 		}
-		.card-body {
-			font-size: medium;
+
+
+		.thumbnails {
+			display: -moz-flex;
+			display: -webkit-flex;
+			display: -ms-flex;
+			display: flex;
+			-moz-align-items: stretch;
+			-webkit-align-items: stretch;
+			-ms-align-items: stretch;
+			align-items: stretch;
+			-moz-justify-content: center;
+			-webkit-justify-content: center;
+			-ms-justify-content: center;
+			justify-content: center;
+			-moz-flex-wrap: wrap;
+			-webkit-flex-wrap: wrap;
+			-ms-flex-wrap: wrap;
+			flex-wrap: wrap;
 		}
+	
+.thumbnails .box {
+	margin: 0 1em 2em 1em;
+	width: 30%;
+}
+
+@media screen and (max-width: 1120px) {
+
+	.thumbnails .box {
+		width: 45%;
+	}
+
+}
+
+@media screen and (max-width: 736px) {
+
+	.thumbnails .box {
+		width: 100%;
+	}
+
+}
+
+.box {
+	border-radius: 4px;
+	margin-bottom: 2em;
+	background: rgb(233, 233, 233);
+	text-align: center;
+}
+
+.box > :last-child,
+.box > :last-child > :last-child,
+.box > :last-child > :last-child > :last-child {
+	margin-bottom: 0;
+}
+
+.box .image.fit {
+	margin: 0;
+}
+
+.box .image img {
+	border-radius: 4px 4px 0 0;
+}
+
+.box .inner {
+	padding: 1.5em;
+	width: 100% !important;
+}
+
+	@media screen and (max-width: 480px) {
+
+		.box .inner {
+			padding: 1em;
+		}
+
+	}
+
+.box.alt {
+	border: 0;
+	border-radius: 0;
+	padding: 0;
+}
+
+.image {
+	border-radius: 4px;
+	border: 0;
+	display: inline-block;
+	position: relative;
+}
+
+.image img {
+	border-radius: 4px;
+	display: block;
+}
+
+.image.left, .image.right {
+	max-width: 40%;
+}
+
+.image.left img, .image.right img {
+	width: 100%;
+}
+
+.image.fit {
+	display: block;
+	margin: 0 0 2em 0;
+	width: 100%;
+}
+
+	.image.fit img {
+		width: 100%;
+	}
+
+.image.main {
+	display: block;
+	margin: 0 0 3em 0;
+	width: 100%;
+}
+
+	.image.main img {
+		width: 100%;
+	}
+
+#xrtql{
+	padding-top: 4%;
+}	
+
+
+#main2 {
+	padding: 4em 0 2em 0;
+}
+
+@media screen and (max-width: 736px) {
+
+	#main2 {
+		padding: 3em 0 1em 0;
+	}
+
+}
+
+#main2 .inner {
+	width: 90%;
+	max-width: 80em;
+	margin: 0 auto;
+}
+
+@media screen and (max-width: 480px) {
+
+	#main2 .inner {
+		width: 95%;
+	}
+
+}
+
+#xr{ 
+	text-align:left;
+}
+
+#dalaoxr{
+	height: 140px;
+}
