@@ -2,6 +2,11 @@ class BecomeTutorController < ApplicationController
     # GET /assist
     def index
         # called before form is filled out
+        if !current_user
+            redirect_to new_user_session_path
+            return
+        end
+
         user = getCurrentUser
         puts user.name
         getCourses
