@@ -6,6 +6,7 @@ one:
   current_number_student: 1
   major: MyString
   description: MyString
+  zoom_link: MyString
 
 two:
   rank: 1
@@ -13,3 +14,4 @@ two:
   current_number_student: 1
   major: MyString
   description: MyString
+  zoom_link: MyString
