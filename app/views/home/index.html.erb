@@ -12,10 +12,15 @@
 				<div class="inner">
 					<a href="/" class="logo"><strong>EDU UP 📚</strong> - Power Education By Creating Community</a>
 					<nav id="nav">
-						<a href="/">Home</a>
-						<a href="/profile">Profile</a>
-						<a href="/users/sign_up">Sign up</a>
-						<a href="/users/sign_in">Log in</a>
+						<a href="/">Home</a> 
+						<% if user_signed_in? %>
+							Logged in as <%= current_user.name %>.
+							<a href="/profile">Profile</a>
+							<%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+						<% else %>
+							<a href="/users/sign_up">Sign up</a>
+							<a href="/users/sign_in">Log in</a>
+						<% end %>
 					</nav>
 					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
 				</div>
