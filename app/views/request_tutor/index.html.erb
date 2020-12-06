@@ -31,7 +31,7 @@
   <div class="row find-a-tutor">
   	<div class="col-lg-7 col-md-4 col-sm-1 col-xs-1">	
 
-            <select name="major" id="major">
+            <select name="search-course-major" id="search-course-major">
                         <option value="">- Select the department for your course -</option>
                         <% @courseAbbreviationsAndNames.each do |k, v| %>
                             <option value= "1"><%= "#{k}" %></option>
@@ -39,7 +39,7 @@
             </select>
 	</div>
     <div class="col-lg-3 col-md-4 col-sm-7 col-xs-7">		
-		<input id="search-bar" type="number" aria-label="Search">	
+		<input name="search-course-number" id="search-course-number" type="number" aria-label="Search">	
 	</div>
     <div class="col-lg-1 col-md-2 col-sm-2 col-xs-2">
 		<button type="submit" class="button special icon fa-search" id="search-button">

@@ -26,7 +26,7 @@
 
 <div class="inner">
     <form method="post" action="#">
-        <div class="row uniform">
+        <div class="row uniform profile-form">
             <div class="6u 12u$(xsmall)">
                 <input type="text" name="name" id="demo-name" placeholder="Name"
                 value="<%= User.find_by(id: current_user.id).name %>" />
@@ -72,7 +72,7 @@
             <% num = 1 %>
             <% while num < 6 do %>
             <div class="12u$">
-                <div class="select-wrapper">
+                <div class="field half first select-wrapper">
                     <select class="course" name= <%= "course#{num}" %> id= <%= "course#{num}" %> >
                         <option value=""><%= "- Course #{num} -" %></option>
                         <% @courseAbbreviationsAndNames.each_with_index do |(subject, courses), index| %>
@@ -81,7 +81,7 @@
                     </select>
                 </div>
 
-                <div class="inner"> 
+                <div class="field half"> 
                     <% courseSym = "course#{num}" %>
                     
                     <input type="text" name= <%= "courseNum#{num}" %> id= <%= "courseNum#{num}" %> value= "<%= User.find_by(id: current_user.id).attributes[courseSym] %>" placeholder="Course Number" />
