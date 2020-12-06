@@ -17,53 +17,40 @@
 <section class="banner become-tutor-banner subbanner" >
 <h2 color="white">Assist: Become a Tutor!</h2>
 </section>
+
 <div class="inner" id = "assist">
+    <header class="align-center">
+        <h3>Become a Tutor! (fill out 1 form per class)</h3>
+    </header>
     <form method="post" action="#">
         <div class="row uniform">
-            <div class="6u 12u$(xsmall)">
-                <input type="text" name="name" id="demo-name" value="" placeholder="Name" />
-            </div>
             <div class="6u$ 12u$(xsmall)">
-                <input type="email" name="email" id="demo-email" value="" placeholder="Email" />
-            </div>
-            <!-- Break -->
-            <div class="12u$">
                 <div class="select-wrapper">
-                    <select name="demo-category" id="demo-category">
-                        <option value="">- Category -</option>
-                        <option value="1">Manufacturing</option>
-                        <option value="1">Shipping</option>
-                        <option value="1">Administration</option>
-                        <option value="1">Human Resources</option>
+                    <select name="major" id="major">
+                        <option value="">- Select the department for your course -</option>
+                        <% @courseAbbreviationsAndNames.each do |k, v| %>
+                            <option value= "1"><%= "#{k}" %></option>
+                        <% end %>
                     </select>
+                </div>
+                <div class="inner"> 
+                <input type="number" name="courseNum" id="courseNum" value="" placeholder="Course Number" />
                 </div>
             </div>
             <!-- Break -->
-            <div class="4u 12u$(small)">
-                <input type="radio" id="demo-priority-low" name="demo-priority" checked>
-                <label for="demo-priority-low">Low Priority</label>
-            </div>
-            <div class="4u 12u$(small)">
-                <input type="radio" id="demo-priority-normal" name="demo-priority">
-                <label for="demo-priority-normal">Normal Priority</label>
-            </div>
-            <div class="4u$ 12u$(small)">
-                <input type="radio" id="demo-priority-high" name="demo-priority">
-                <label for="demo-priority-high">High Priority</label>
-            </div>
-            <!-- Break -->
-            <div class="6u 12u$(small)">
-                <input type="checkbox" id="demo-copy" name="demo-copy">
-                <label for="demo-copy">Email me a copy of this message</label>
-            </div>
-            <div class="6u$ 12u$(small)">
-                <input type="checkbox" id="demo-human" name="demo-human" checked>
-                <label for="demo-human">I am a human and not a robot</label>
-            </div>
-            <!-- Break -->
             <div class="12u$">
-                <textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+                <input type="text" name="Grade" id="Grade" value="" placeholder="Grade Recieved (Optional)" />
             </div>
+
+            <div class="12u$">
+                <input type="text" name="Availability" id="Availability" value="" placeholder="Hours Available per Week" />
+            </div>
+
+            <div class="12u$">
+                <input type="text" name="Pay" id="Pay" value="" placeholder="Expected Pay per Hour" />
+            </div>
+            <!-- Break -->
+            <input type-"hidden" style="display: none" name="user_id" value= <%= "#{@curr_user_id}" %> />
             <!-- Break -->
             <div class="12u$">
                 <ul class="actions">

@@ -34,7 +34,7 @@
             <% while num < 6 do %>
             <div class="12u$">
                 <div class="select-wrapper">
-                    <select name= <%= "club#{num}" %> id= <%= "club#{num}" %> >
+                    <select class="club" name= <%= "club#{num}" %> id= <%= "club#{num}" %> >
                         <option value=""><%= "- Club #{num} -" %></option>
                         <% @clubs.each_with_index do |club, index| %>
                             <option value= <%= "#{index}" %> ><%= club %></option>
