@@ -27,15 +27,15 @@ def SingletSim(u1, u2, sbert_model):
     return sim
 
 def FindCourse(course, course_dict):
-    title = course_dict[course]
     try:
+        title = course_dict[course]
         title[0]
         return title
     except:
         return course
 
 def WordSim(u1, u2, sbert_model):
-    with open("courses.json", 'w') as json_file:
+    with open("courses.json") as json_file:
         course_dict = json.load(json_file)
     similarities = []
     if len(u1) == 0 or len(u2) == 0:
