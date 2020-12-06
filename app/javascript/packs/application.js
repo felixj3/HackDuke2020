@@ -11,6 +11,8 @@ require("packs/main")
 require("packs/util")
 require("packs/main2")
 require("packs/util2")
+require("packs/application")
+require("packs/click")
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
