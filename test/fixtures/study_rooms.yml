@@ -2,8 +2,12 @@
 
 one:
   rank: 1
-  number_student: 1
+  capacity: 1
+  current_number_student: 1
+  major: MyString
 
 two:
   rank: 1
-  number_student: 1
+  capacity: 1
+  current_number_student: 1
+  major: MyString
