@@ -24,7 +24,9 @@ ActiveRecord::Schema.define(version: 2020_12_06_050422) do
 
   create_table "study_rooms", force: :cascade do |t|
     t.integer "rank"
-    t.integer "number_student"
+    t.integer "capacity"
+    t.integer "current_number_student"
+    t.string "major"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
