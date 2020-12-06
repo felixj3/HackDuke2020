@@ -6,4 +6,8 @@ class User < ApplicationRecord
 
     has_many :tutors
   # belongs_to :study_room
+
+    def self.getClubs
+        puts "hi"
+    end
 end
