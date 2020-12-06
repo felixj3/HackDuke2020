@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_06_050422) do
+ActiveRecord::Schema.define(version: 2020_12_06_111712) do
 
   create_table "feedbacks", force: :cascade do |t|
     t.float "courseDis"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 2020_12_06_050422) do
     t.integer "capacity"
     t.integer "current_number_student"
     t.string "major"
+    t.string "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

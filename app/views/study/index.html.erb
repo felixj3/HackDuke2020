@@ -22,13 +22,19 @@
 
 <div>
 <section class="banner find-study-room subbanner" >
-<h2 color="white">Study: Join a Room!</h2>
+<h2 color="white">Study: Join a Room!</h2> 
 </section>
-
+<div class="inner">
+<div class="inner">
+<a class="button fit" id="xrdalao" href="/newroom">Create A New Study Room</a>
+</div>
+</div>
 <div id = "xrtql">
 		<div id="main2">
 			<div class="inner">
+			<%cnt = 0%>
 				<div class="thumbnails">
+				    
 					<% @rooms.each do |room| %>
 						<%a = rand(7)%>
 						<%if a == 0%>
@@ -121,6 +127,10 @@
 								<a class="button fit">Join</a>
 							</div>
 						</div>
+						<%end%>
+						<%cnt = cnt+1%>
+						<%if cnt>=15%>
+						  <%break%>
 						<%end%>
 					<%end%>
 				</div>

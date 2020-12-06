@@ -1,0 +1,55 @@
+<%numberChoices = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]%>
+<header id="header">
+    <div class="inner">
+        <a href="/" class="logo"><strong>EDU UP 📚</strong> - Power Education By Creating Community</a>
+        <nav id="nav">
+            <% if user_signed_in? %>
+                Logged in as <%= User.find_by(id: current_user.id).name %>
+            <% end %>
+            <a href="/">Home</a> 
+            <% if user_signed_in? %>
+                <a href="/profile">Profile</a>
+                <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+            <% else %>
+                <a href="/users/sign_up">Sign up</a>
+                <a href="/users/sign_in">Log in</a>
+            <% end %>
+        </nav>
+        <a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+    </div>
+</header>
+
+<section class="banner subbanner" >
+    <header>
+        <h2>Create New Room</h2>
+    </header>
+</section>
+
+<div class="inner">
+    <form method="post" action="#">
+        <div class="row uniform">
+        <h4>What is the capacity of your room?</h4>
+        <select name="capacity" id="capacity">
+            <option value=""></option>
+            <% numberChoices.each do |k| %>
+                <option><%= k %></option>
+            <% end %>
+        </select>
+        <h4>Which major will you choose for your room?</h4>
+            <select name="major" id="major">
+                <option value=""></option>
+                <% @courseAbbreviationsAndNames.each do |k, v| %>
+                    <option value= "1"><%= "#{k}" %></option>
+                <% end %>
+            </select>
+        <h4>Briefly describe the room you are going to create.</h4>
+        <input type= "text" class="form-control" name="description">
+        <div class="12u$" id="xrtqqql">
+            <ul class="actions">
+                <li><input type="submit" value="Create Room" /></li>
+                <li><input type="reset" value="Reset" /></li>
+            </ul>
+        </div>
+        </div>
+    </form>
+</div>
