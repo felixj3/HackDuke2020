@@ -60,7 +60,16 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.0]
       t.string :course4
       t.string :subject5
       t.string :course5
+      
+      t.string :hometown
 
+      t.string :club1
+      t.string :club2
+      t.string :club3
+      t.string :club4
+      t.string :club5
+
+      
       t.string :major
 
       t.belongs_to :study_room

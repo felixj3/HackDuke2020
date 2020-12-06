@@ -31,18 +31,29 @@ class HomeController < ApplicationController
     session.each do |k,v|
       puts "key: #{k} value: #{v}"
     end
+    getClubs
     puts("----------------------------------------\n")
-    @userClubs = Array.new
+    @userClubs = ["", "", "", "", ""]
     user_id = params[:user_id]
+    user = User.find_by(id: user_id)
+    clubIndex = 1
     params.each do |k,v|
         puts "key: #{k} value: #{v}"
-        if v != "" and k.to_s.include? "club"
-          puts "#{v} is not null and is a club"
-          @userClubs << v
+        if k.to_s.include? "club"
+          puts "#{v} is a club"
+          if v.to_i != -1
+            @userClubs[clubIndex - 1] = @clubs[v.to_i]
+          else
+            @userClubs[clubIndex - 1] = user.attributes["club#{clubIndex}"]
+          end
+          clubIndex = clubIndex + 1
         end
     end
 
-    getClubs
+    @userClubs.each do |c|
+      puts c
+    end
+
     categories = [0,0,0,0,0,0,0,0,0,0,0,0] # how many clubs user has under each category
     @categoryAndClubs.each_with_index do |(category, clubs), index|
       @userClubs.each do |club|
@@ -58,8 +69,12 @@ class HomeController < ApplicationController
       # puts v
     end
     # above code puts how many clubs the user does in each category, using the categories array
-    user = User.find_by(id: user_id)
+    
     user.update(category1: categories[0], category2: categories[1], category3: categories[2], category4: categories[3], category5: categories[4], category6: categories[5], category7: categories[6], category8: categories[7], category9: categories[8], category10: categories[9], category11: categories[10], category12: categories[11], name: params[:name])
+    
+    user.update(hometown: params[:hometown])
+
+    user.update(club1: @userClubs[0], club2: @userClubs[1], club3: @userClubs[2], club4: @userClubs[3], club5: @userClubs[4],)
 
     getCourses
     courseNames = @courseAbbreviationsAndNames.keys
@@ -74,6 +89,8 @@ class HomeController < ApplicationController
         if !second
           if v.to_i != -1
             userCourses[(currNum-1)*2] = courseNames[v.to_i]
+          else
+            userCourses[(currNum-1)*2] = user.attributes["subject#{currNum}"]
           end
           second = true
         else
@@ -83,7 +100,7 @@ class HomeController < ApplicationController
         end
       end
     end
-    
+
     user.update(subject1: userCourses[0], course1: userCourses[1], subject2: userCourses[2], course2: userCourses[3], subject3: userCourses[4], course3: userCourses[5], subject4: userCourses[6], course4: userCourses[7], subject5: userCourses[8], course5: userCourses[9])
 
     userCourses.each do |c|

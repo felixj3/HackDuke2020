@@ -27,7 +27,7 @@
 <div class="inner">
     <form method="post" action="#">
         <div class="row uniform profile-form">
-            <div class ="flex-center">
+            <div class ="inner flex-center">
             <h2> Let us know you a bit better! </h2>
             </div>
             <div class="6u 12u$(xsmall)">
@@ -38,7 +38,12 @@
                 <input type="text" name="gradYear" id="gradYear" placeholder="Graduation Year (ex. 2024)"
                 value="<%= User.find_by(id: current_user.id).gradYear %>" />
             </div>
-            <div class ="flex-center">
+            <div class="12u$">
+                <input type="text" name="hometown" id="hometwon"
+                placeholder="Hometown (ex. Durham, NC)"
+                value="<%= User.find_by(id: current_user.id).hometown %>" />
+            </div>
+            <div class ="inner flex-center">
             <h2> Select your major! </h2>
             </div>
             <div class="12u$">
@@ -56,7 +61,7 @@
                 </div>
             </div>
             <!-- Break -->
-            <div class ="flex-center">
+            <div class ="inner flex-center">
             <h2> Select up to 5 clubs you are in! </h2>
             </div>
 
@@ -65,7 +70,13 @@
             <div class="12u$">
                 <div class="select-wrapper">
                     <select class="club" name= <%= "club#{num}" %> id= <%= "club#{num}" %> >
-                        <option value=""><%= "- Club #{num} -" %></option>
+                        <% currClub = "- Club #{num} -" %>
+                        <% clubName = "club#{num}" %>
+                        <% temp = User.find_by(id: current_user.id).attributes[clubName] %>
+                        <% if temp != nil and temp != "" %>
+                            <% currClub = temp %>
+                        <% end %>
+                        <option value="-1"><%= "#{currClub}" %></option>
                         <% @clubs.each_with_index do |club, index| %>
                             <option value= <%= "#{index}" %> ><%= club %></option>
                         <% end %>
@@ -75,7 +86,7 @@
                 <% num = num + 1 %>
             <% end %>
             <!-- Break -->
-            <div class ="flex-center">
+            <div class ="inner flex-center">
             <h2> Select up to 5 of your favorite classes taken! </h2>
             </div>
 
@@ -85,8 +96,12 @@
                 <div class="field half first select-wrapper">
                     <select class="course" name= <%= "course#{num}" %> id= <%= "course#{num}" %> >
                         <% currCourse = "- Course #{num} -" %>
-                        
-                        <option value="-1"><%= "- Course #{num} -" %></option>
+                        <% courseName = "subject#{num}" %>
+                        <% temp = User.find_by(id: current_user.id).attributes[courseName] %>
+                        <% if temp != nil and temp != "" %>
+                            <% currCourse = temp %>
+                        <% end %>
+                        <option value="-1"><%= "#{currCourse}" %></option>
                         <% @courseAbbreviationsAndNames.each_with_index do |(subject, courses), index| %>
                             <option value= <%= "#{index}" %> ><%= subject %></option>
                         <% end %>
@@ -95,7 +110,6 @@
 
                 <div class="field half"> 
                     <% courseSym = "course#{num}" %>
-                    
                     <input type="text" name= <%= "courseNum#{num}" %> id= <%= "courseNum#{num}" %> value= "<%= User.find_by(id: current_user.id).attributes[courseSym] %>" placeholder="Course Number" />
                 </div>
             </div>

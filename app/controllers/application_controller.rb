@@ -11,6 +11,10 @@ class ApplicationController < ActionController::Base
         return JSON.parse(res.body)
     end
 
+    def getUserJSON
+        render json: {data: User.all}, status: :ok
+    end
+
     def getCurrentUser
         if !current_user
             redirect_to new_user_session_path
@@ -42,4 +46,10 @@ class ApplicationController < ActionController::Base
         puts("----------------------------------------\n")
 
       end
+
+      def after_sign_in_path_for(resource)
+            profile_path
+      end
+
+      
 end
