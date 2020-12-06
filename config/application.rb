@@ -18,7 +18,7 @@ module HackDuke2020
 
     $BACKBACKENDPORT = 8000
     config.before_initialize do 
-      IO.popen("python mlModel/BackBackEnd/server.py -p " + $BACKBACKENDPORT.to_s)
+      IO.popen("python3 mlModel/BackBackEnd/server.py -p " + $BACKBACKENDPORT.to_s)
     end
   end
 end
