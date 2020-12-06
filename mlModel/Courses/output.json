@@ -2,6 +2,7 @@
     [
         "Aerospace Studies\u2014Air Force ROTC (AEROSCI)",
         [
+            ["99L", "Leadership Laboratory."],
             ["101", "Heritage and Values of the United States Air Force."],
             ["102", "Heritage and Values of the United States Air Force."],
             ["201", "Team and Leadership Fundamentals."],
@@ -15,6 +16,7 @@
     [
         "African & African American Studies (AAAS)",
         [
+            ["89S", "First-Year Seminar."],
             ["102", "Introduction to African American Studies."],
             ["103", "Introduction to African Studies (DS3 or DS4)."],
             ["104", "Introduction to Latino/a Studies in the Global South."],
@@ -275,6 +277,8 @@
     [
         "Art History (ARTHIST)",
         [
+            ["20", "Basic Art History."],
+            ["89S", "First-Year Seminar."],
             ["101D", "Introduction to the History of Art."],
             [
                 "102D",
@@ -549,6 +553,8 @@
     [
         "Visual Arts (ARTSVIS)",
         [
+            ["21", "General Art, Studio."],
+            ["89S", "First-Year Seminar."],
             ["101", "Book Art: Form and Function."],
             ["107L", "Design Fundamentals."],
             ["115S", "Introduction to Black and White Photography."],
@@ -709,6 +715,7 @@
     [
         "Visual and Media Studies (VMS)",
         [
+            ["89S", "First-Year Seminar."],
             ["101", "Book Art: Form and Function."],
             ["103", "Traditions in Documentary Studies."],
             ["106S", "The Documentary Experience: A Video Approach."],
@@ -1174,6 +1181,7 @@
     [
         "Arts & Sciences (ARTS&SCI)",
         [
+            ["89S", "Special Topics: First-Year Seminar."],
             [
                 "101D",
                 "Introduction to Inquiry and Research across Disciplines."
@@ -1188,6 +1196,8 @@
     [
         "Asian & Middle Eastern Studies (AMES)",
         [
+            ["80S", "Studies in Special Topics."],
+            ["89S", "First-Year Seminar."],
             ["105", "Understanding the Middle East."],
             [
                 "107",
@@ -1539,6 +1549,10 @@
     [
         "Arabic (ARABIC)",
         [
+            [
+                "99",
+                "Survival Arabic: Arabic Language and Culture of Lebanon, Jordan, and Palestine."
+            ],
             ["101", "Elementary Arabic."],
             ["102", "Elementary Arabic."],
             ["203", "Intermediate Arabic."],
@@ -1564,7 +1578,12 @@
                 "Translation as a Research Tool in Arabic and Islamic Studies."
             ],
             ["610S", "Quranic Arabic: Tafsir and Tajwid."],
-            ["690", "Special Readings."],
+            ["690", "Special Readings."]
+        ]
+    ],
+    [
+        "Chinese (CHINESE)",
+        [
             ["101", "First-Year Chinese I."],
             ["101A", "First-Year Chinese."],
             ["102", "First-Year Chinese II."],
@@ -1629,7 +1648,12 @@
             ["391", "Independent Study."],
             ["391-1", "Independent Study."],
             ["407S", "Issues in Hindi Language and Society II."],
-            ["408S", "Issues in Hindi Language and Society II."],
+            ["408S", "Issues in Hindi Language and Society II."]
+        ]
+    ],
+    [
+        "Japanese (JPN)",
+        [
             ["101", "Elementary Japanese."],
             ["102", "Elementary Japanese."],
             ["203", "Intermediate Japanese."],
@@ -1641,7 +1665,12 @@
             ["408S", "Issues in Japanese Language and Society II."],
             ["451S", "Readings in Japanese Texts."],
             ["471S", "Topics in Classical Japanese (Bungo)."],
-            ["650", "Research Methods in Japanese (B)."],
+            ["650", "Research Methods in Japanese (B)."]
+        ]
+    ],
+    [
+        "Korean (KOREAN)",
+        [
             ["101", "Elementary Korean."],
             ["102", "Elementary Korean."],
             ["203", "Intermediate Korean."],
@@ -1727,6 +1756,9 @@
     [
         "Biology (BIOLOGY)",
         [
+            ["20", "General Biology."],
+            ["21", "General Biology."],
+            ["89S", "First-Year Seminar."],
             [
                 "128FS",
                 "Evolutionary Genomics: Who Are We, Where Have We Been, and Where Are We Going?."
@@ -1968,6 +2000,12 @@
     [
         "Chemistry (CHEM)",
         [
+            ["20", "General Chemistry Credit."],
+            ["21", "General Chemistry Credit."],
+            ["81S", "Introduction to Research in Chemistry."],
+            ["89S", "First-Year Seminar."],
+            ["91", "Chemistry, Technology, and Society."],
+            ["99D", "Introduction to Chemistry and Chemical Problem Solving."],
             ["101DL", "Core Concepts in Chemistry."],
             ["110DL", "Honors Chemistry: Core Concepts in Context."],
             ["130L", "The Chemistry and Physics of Cooking."],
@@ -2038,6 +2076,7 @@
     [
         "Child Policy Research (CHILDPOL)",
         [
+            ["89S", "First-Year Seminar."],
             ["241", "Multi-Method Approaches to Social and Policy Research."],
             ["241A", "Multi-Method Approaches to Social and Policy Research."],
             ["250S", "Child Policy Research."],
@@ -2066,7 +2105,13 @@
                 "Introduction to Engaged Citizenship and Social Change (Gateway Course)."
             ],
             ["283", "Ethics in an Unjust World."],
-            ["391", "Independent Study."],
+            ["391", "Independent Study."]
+        ]
+    ],
+    [
+        "Classical Studies (CLST)",
+        [
+            ["89S", "First-Year Seminar."],
             ["107", "Roman Art and Archaeology."],
             ["141", "Age of Warriors: Pre-Roman and Italian Archaeology."],
             ["144", "Principles of Archaeology."],
@@ -2258,7 +2303,13 @@
                 "654S",
                 "Advanced Intermediate Greek for Graduate Students outside Classical Studies."
             ],
-            ["691", "Directed Reading and Research."],
+            ["691", "Directed Reading and Research."]
+        ]
+    ],
+    [
+        "Latin (LATIN)",
+        [
+            ["25", "Introduction to Literature."],
             ["101", "Elementary Latin."],
             ["102", "Elementary Latin."],
             ["203", "Intermediate Latin."],
@@ -2365,6 +2416,12 @@
     [
         "Computer Science (COMPSCI)",
         [
+            ["89S", "First-Year Seminar."],
+            [
+                "92L",
+                "Technical and Social Analysis of Information and the Internet."
+            ],
+            ["94", "Programming and Problem Solving."],
             ["101L", "Introduction to Computer Science."],
             ["102L", "Interdisciplinary Introduction to Computer Science."],
             ["103L", "Computing and the Brain."],
@@ -2459,6 +2516,8 @@
     [
         "Cultural Anthropology (CULANTH)",
         [
+            ["80S", "Studies in Special Topics."],
+            ["89S", "First-Year Seminar."],
             ["101", "Introduction to Cultural Anthropology."],
             ["101D", "Introduction to Cultural Anthropology."],
             [
@@ -2784,6 +2843,7 @@
             ["443", "Performance: Tap."],
             ["462", "Performance: Interdisciplinary."],
             ["472", "Performance: Dance Theater."],
+            ["89S", "First-Year Seminar."],
             ["101", "Introduction to Dance."],
             ["105S", "Dance Composition."],
             ["135", "Experimental Sculpture and Installation Art."],
@@ -2863,6 +2923,8 @@
     [
         "Documentary Studies (DOCST)",
         [
+            ["80S", "Studies in Special Topics."],
+            ["89S", "First Year Seminar."],
             ["101", "Traditions in Documentary Studies."],
             ["105S", "The Documentary Experience: A Video Approach."],
             ["107", "History of Documentary Film."],
@@ -3017,13 +3079,23 @@
             ["590S", "Special Topics in Documentary Studies."],
             ["620S", "Film-philosophers/Film-makers."],
             ["630", "Projections in Time: The Still and Moving Image."],
-            ["640S", "Expanded Cinema: Cinema Outside the Movie Theater."],
+            ["640S", "Expanded Cinema: Cinema Outside the Movie Theater."]
+        ]
+    ],
+    [
+        "Decision Sciences (DECSCI)",
+        [
             ["101", "Fundamentals of Decision Science."],
             [
                 "201",
                 "Discovering Game Theory: Social Complexity and Strategic Interdependence."
             ],
-            ["401S", "Research in Decision Science."],
+            ["401S", "Research in Decision Science."]
+        ]
+    ],
+    [
+        "Brain & Society (BRAINSOC)",
+        [
             ["390S", "Bass Connections in Brain and Society: Special Topics."],
             [
                 "395",
@@ -3056,7 +3128,13 @@
             [
                 "398-1",
                 "Bass Connections in Brain and Society 4: Interdisciplinary Team Projects."
-            ],
+            ]
+        ]
+    ],
+    [
+        "Earth and Ocean Sciences (EOS)",
+        [
+            ["89S", "First-Year Seminar."],
             ["101", "The Dynamic Earth."],
             ["102", "The Dynamic Oceans."],
             [
@@ -3147,6 +3225,12 @@
     [
         "Economics (ECON)",
         [
+            ["21", "Principles of Microeconomics."],
+            ["22", "Principles of Macroeconomics."],
+            ["23", "Principles of Microeconomics."],
+            ["24", "Principles of Macroeconomics."],
+            ["80S", "Special Topics."],
+            ["89S", "First-Year Seminar."],
             ["101", "Economic Principles."],
             ["101D", "Economic Principles."],
             [
@@ -3476,6 +3560,7 @@
     [
         "Education (EDUC)",
         [
+            ["89S", "First-Year Seminar."],
             ["101", "Social and Philosophical Foundations of Education."],
             ["101S", "Social and Philosophical Foundations of Education."],
             [
@@ -3606,6 +3691,7 @@
     [
         "Energy (ENERGY)",
         [
+            ["89S", "Special Topics: First-Year Seminar."],
             ["190", "Special Topics in Energy."],
             ["190FS", "Focus Program Seminar in Energy: Special Topics."],
             ["231", "Energy and the Environment."],
@@ -3646,6 +3732,10 @@
     [
         "English (ENGLISH)",
         [
+            ["20", "Literature and Composition."],
+            ["22", "Composition and Language."],
+            ["89S", "First-Year Seminar on Literature."],
+            ["90S", "Special Topics in Literature."],
             ["101S", "The Art of Reading."],
             ["110S", "Introduction to Creative Writing."],
             ["171", "Representative American Writers."],
@@ -3912,6 +4002,7 @@
     [
         "Environmental Sciences and Policy Program (ENVIRON)",
         [
+            ["89S", "First-Year Seminar."],
             ["102", "Introduction to Environmental Sciences and Policy."],
             ["147", "Israel/Palestine: Comparative Perspectives."],
             [
@@ -4190,6 +4281,7 @@
     [
         "Ethics (ETHICS)",
         [
+            ["89S", "Special Topic: First-Year Seminar in Ethics."],
             ["101", "The Challenges of Living an Ethical Life."],
             ["101D", "The Challenges of Living an Ethical Life."],
             ["111S", "The Examined Life."],
@@ -4335,6 +4427,7 @@
     [
         "Evolutionary Anthropology (EVANTH)",
         [
+            ["89S", "First-Year Seminar."],
             ["101", "Introduction to Evolutionary Anthropology."],
             ["101D", "Introduction to Evolutionary Anthropology."],
             ["190", "Topics in Evolutionary Anthropology."],
@@ -4410,6 +4503,8 @@
     [
         "Gender, Sexuality, and Feminist Studies (GSF)",
         [
+            ["80S", "Special Topics in Writing."],
+            ["89S", "First-Year Seminar in Gender Studies."],
             ["101S", "Gateway Seminar: Gender and Everyday Life."],
             [
                 "115",
@@ -4605,6 +4700,7 @@
     [
         "Study of Sexualities (SXL)",
         [
+            ["89S", "First Year Seminar."],
             [
                 "115",
                 "Introduction to the History of Women, Gender, and Sexuality."
@@ -4646,6 +4742,7 @@
     [
         "German Studies (GERMAN)",
         [
+            ["29", "Advanced Placement in German."],
             ["101", "First-Year German I."],
             ["102", "First-Year German II."],
             ["111", "Intensive First-Year German."],
@@ -4705,6 +4802,7 @@
                 "690S",
                 "Special Topics in German Literature and Cultural Studies."
             ],
+            ["89S", "First-Year Seminar."],
             ["190S-1", "Special Topics in German Studies."],
             ["243", "Modern European Short Fiction."],
             ["250", "Moral Dilemmas in Philosophy and Literature."],
@@ -4790,6 +4888,7 @@
     [
         "Global Health (GLHLTH)",
         [
+            ["89S", "First Year Seminar: Special Topics in Global Health."],
             ["101", "Fundamentals of Global Health."],
             ["101D", "Fundamentals of Global Health."],
             ["140FS", "On Suffering: How Science and Stories Shape Us."],
@@ -4973,6 +5072,7 @@
     [
         "History (HISTORY)",
         [
+            ["89S", "First-Year Seminar."],
             ["101", "Introduction to Global History."],
             ["103", "Comparative Approaches to Global Issues."],
             ["105", "Old Worlds/New Histories, 500-1500 CE."],
@@ -5575,7 +5675,8 @@
                 "Africa, Cuba, Brazil: Great Powers of the Black Atlantic."
             ],
             ["611", "Biography, Life Writing, Autofiction."],
-            ["627", "Soviet and Post-Soviet Economic History."]
+            ["627", "Soviet and Post-Soviet Economic History."],
+            ["59", "House Course."]
         ]
     ],
     [
@@ -5592,6 +5693,7 @@
     [
         "Human Rights (RIGHTS)",
         [
+            ["89S", "Special Topics in Human Rights."],
             ["190", "Special Topics in Human Rights."],
             ["190S", "Special Topics in Human Rights."],
             ["290", "Special Topics in Human Rights."],
@@ -5795,7 +5897,13 @@
             ["352", "Immigrant Dreams, U.S."],
             ["374D", "Women, Gender, and Sexuality in U.S."],
             ["220", "Immigrant Dreams, U.S."],
-            ["344", "History of U.S."],
+            ["344", "History of U.S."]
+        ]
+    ],
+    [
+        "Information Science + Studies (ISS)",
+        [
+            ["89S", "Special Topics in Information Science + Studies."],
             [
                 "101L",
                 "Technical and Social Analysis of Information and the Internet."
@@ -5971,6 +6079,7 @@
     [
         "Innovation and Entrepreneurship (I&E)",
         [
+            ["89S", "Special Topics."],
             [
                 "140",
                 "Create, Innovate, Act: Creativity, Innovation, and Social Action."
@@ -6046,6 +6155,7 @@
     [
         "International Comparative Studies (ICS)",
         [
+            ["89S", "First Year Seminar."],
             ["101", "Introduction to Cultural Anthropology."],
             ["101D", "Introduction to Cultural Anthropology."],
             ["102", "Introduction to Dance."],
@@ -6454,6 +6564,8 @@
     [
         "Jewish Studies (JEWISHST)",
         [
+            ["80S", "Special Topics in Writing."],
+            ["89S", "First Year Seminar."],
             ["101", "Elementary Modern Hebrew."],
             ["102", "Elementary Modern Hebrew."],
             ["140", "Judaism."],
@@ -6524,6 +6636,10 @@
     [
         "Latin American Studies (LATAMER)",
         [
+            [
+                "89S",
+                "First Year Seminar in Latin American and Caribbean Studies."
+            ],
             ["121", "Introduction to Contemporary Latin America."],
             ["122", "History of Latinxs in the United States."],
             ["222", "Environment and Global Capitalism in Latin America."],
@@ -6579,6 +6695,7 @@
     [
         "Latino/a Studies in the Global South (LSGS)",
         [
+            ["89S", "First Year Seminar."],
             ["201", "Introduction to Latino/a Studies in the Global South."],
             ["201S", "Introduction to Latino/a Studies in the Global South."],
             ["254", "Cultures and Politics of the America Borderlands."],
@@ -6628,6 +6745,7 @@
     [
         "Linguistics (LINGUIST)",
         [
+            ["89S", "First-Year Seminar Special Topics."],
             ["114FS", "The Power of Poetry."],
             ["115FS", "Games and the Brain."],
             [
@@ -6734,6 +6852,8 @@
     [
         "Global Cultural Studies in Literature Program (LIT)",
         [
+            ["80S", "Special Topics: Introduction to Literature."],
+            ["89S", "First-Year Seminar."],
             ["102", "Introduction to African American Studies."],
             ["110", "Introduction to Film Studies."],
             ["190", "Special Topics in Literature."],
@@ -7121,23 +7241,16 @@
             [
                 "490S",
                 "Special Topics Seminar in Markets and Management Studies."
-            ],
-            [
-                "252",
-                "America in the World Economy: The Law, Politics, and Economics of U.S."
-            ],
-            [
-                "255",
-                "America in the World Economy: The Law, Politics, and Economics of U.S."
-            ],
-            [
-                "254",
-                "America in the World Economy: The Law, Politics, and Economics of U.S."
-            ],
-            [
-                "255",
-                "America in the World Economy: The Law, Politics, and Economics of U.S."
-            ],
+            ]
+        ]
+    ],
+    [
+        "Mathematics (MATH)",
+        [
+            ["21", "Introductory Calculus I."],
+            ["22", "Introductory Calculus II."],
+            ["75", "SPIRE Fellows STEM Skills and Identity Building."],
+            ["89S", "First-Year Seminar."],
             ["105L", "Laboratory Calculus and Functions I."],
             ["106L", "Laboratory Calculus and Functions II."],
             ["111L", "Laboratory Calculus I."],
@@ -7313,6 +7426,7 @@
             ["293", "Research Independent Study."],
             ["491", "Independent Study: Thesis."],
             ["493", "Research Independent Study: Thesis."],
+            ["89S", "First-Year Seminar."],
             ["105", "Old Worlds/New Histories, 500-1500 CE."],
             ["125", "Early Modern Europe."],
             ["128", "War and Society in the Middle Ages and Renaissance."],
@@ -7493,6 +7607,11 @@
     [
         "Military Science\u2014Army ROTC (MILITSCI)",
         [
+            ["91L", "Leadership Laboratory - Fall Semester Only."],
+            ["92L", "Leadership Laboratory - Spring Semester Only."],
+            ["93L", "Senior Leadership Laboratory - Fall Semester."],
+            ["94", "Basic Army Physical Development."],
+            ["94L", "Senior Leadership Laboratory - Spring Semester."],
             ["101S", "Introduction to the Army."],
             ["102S", "Foundations of Leadership."],
             ["201", "Leadership and Ethics."],
@@ -7534,6 +7653,7 @@
             ["463S", "Theory and Practice of Post-Tonal Music."],
             ["465S", "Counterpoint."],
             ["481T", "Advanced Composition."],
+            ["89S", "First-Year Seminar."],
             ["117", "Aspects of Performance."],
             ["120", "Music: An Introduction."],
             ["126", "Acoustics and Music."],
@@ -7731,6 +7851,7 @@
     [
         "Neuroscience (NEUROSCI)",
         [
+            ["89S", "First-Year Seminar Special Topics."],
             ["101", "Biological Bases of Behavior: Introduction and Survey."],
             ["102", "Biological Bases of Behavior (Team-Based Learning)."],
             ["103L", "Computing and the Brain."],
@@ -7879,6 +8000,7 @@
     [
         "Philosophy (PHIL)",
         [
+            ["89S", "First-Year Seminar."],
             ["101", "Introduction to Philosophy."],
             ["103S", "Introduction to Philosophy."],
             ["104S", "Introduction to Philosophy."],
@@ -8020,7 +8142,12 @@
             ["678S", "Pragmatism."],
             ["681S", "Wittgensteinian Perspectives on Literary Theory."],
             ["692S", "Bioethics."],
-            ["693S", "Causation."],
+            ["693S", "Causation."]
+        ]
+    ],
+    [
+        "Health, Wellness, and Physical Education (PHYSEDU)",
+        [
             ["101", "Cardio Conditioning."],
             ["102", "Triathlon Training."],
             ["103", "Indoor Cycling."],
@@ -8080,6 +8207,7 @@
             ["186", "Stand Up Paddleboard Fitness."],
             ["189", "Campus Recreation."],
             ["190", "Care and Prevention of Athletic Injuries."],
+            ["89S", "First-Year Seminar."],
             ["192", "Independent Study."],
             ["203", "Diet and Nutrition."],
             ["204", "Women\u2019s Health."],
@@ -8101,6 +8229,7 @@
     [
         "Physics (PHYSICS)",
         [
+            ["89S", "First-Year Seminar."],
             ["131", "Introductory Lecture on Big Questions in Physics."],
             ["131-1", "Introductory Lecture on Big Questions in Physics."],
             ["133", "The Physics of Sports."],
@@ -8180,6 +8309,10 @@
         "Policy Journalism and Media Studies (PJMS)",
         [
             [
+                "89S",
+                "First Year Seminar: Special Topics in Policy, Journalism and Media Studies."
+            ],
+            [
                 "112",
                 "The Googlization of Knowledge: Information, Ethics, and Technology."
             ],
@@ -8227,6 +8360,10 @@
     [
         "Political Science (POLSCI)",
         [
+            ["20", "American Government and Politics."],
+            ["21", "Comparative Government and Politics."],
+            ["89S", "First-Year Seminar."],
+            ["90S", "Special Topics in Political Science."],
             ["101", "Introduction to Political Science."],
             ["102", "The Science of Politics."],
             ["105S", "The Documentary Experience: A Video Approach."],
@@ -8793,6 +8930,8 @@
     [
         "Psychology (PSY)",
         [
+            ["89S", "First-Year Seminar."],
+            ["91", "General Psychology."],
             ["101", "Introductory Psychology."],
             ["102", "Cognitive Psychology: Introduction and Survey."],
             ["103", "Developmental Psychology: Introduction and Survey."],
@@ -9018,6 +9157,7 @@
     [
         "Public Policy Studies (PUBPOL)",
         [
+            ["89S", "First-Year Seminar."],
             [
                 "110",
                 "Information, Society & Culture: Bass Connections Gateway."
@@ -9489,6 +9629,8 @@
     [
         "Religious Studies (RELIGION)",
         [
+            ["80S", "Special Topics in Writing."],
+            ["89S", "First-Year Seminar."],
             ["101", "Introduction to Religious Studies."],
             ["110", "Self, Society and Art in Modern Hinduism."],
             ["120", "Buddhism."],
@@ -9745,6 +9887,7 @@
     [
         "Romance Studies (ROMST)",
         [
+            ["89S", "First Year Seminar in Romance Studies."],
             [
                 "190A",
                 "Duke-Administered Study Abroad: Special Topics in Romance Studies."
@@ -9873,6 +10016,8 @@
     [
         "French (FRENCH)",
         [
+            ["89S", "First-Year Seminar."],
+            ["89S-1", "First-Year Seminar in French."],
             ["101", "Elementary French 1."],
             ["102", "Elementary French 2."],
             ["111", "Intensive Elementary French."],
@@ -10006,7 +10151,13 @@
             ["611", "Biography, Life Writing, Autofiction."],
             ["690-1", "Topics in French Literature of the Eighteenth Century."],
             ["690-2", "Topics in French Literature of the Modern Era."],
-            ["690S-2", "Topics in French Literature of the Modern Era."],
+            ["690S-2", "Topics in French Literature of the Modern Era."]
+        ]
+    ],
+    [
+        "Italian (ITALIAN)",
+        [
+            ["89S", "First Year Seminar in Italian."],
             ["101", "Elementary Italian 1."],
             ["101A", "Italian for Beginners."],
             ["102", "Elementary Italian 2."],
@@ -10133,7 +10284,12 @@
             ["590S", "Topics in Italian Studies."],
             ["590S-1", "Topics in Renaissance Studies."],
             ["590SP", "Topics in Italian Studies - Preceptorial."],
-            ["590SP-1", "Renaissance Studies: Preceptorial."],
+            ["590SP-1", "Renaissance Studies: Preceptorial."]
+        ]
+    ],
+    [
+        "K\u2019iche\u2019 Maya (KICHE)",
+        [
             ["101", "Elementary K\u2019iche\u2019 Maya I."],
             ["102", "Elementary K\u2019iche\u2019 Maya II."],
             ["203", "Intermediate K\u2019iche\u2019 Maya I."],
@@ -10143,6 +10299,7 @@
     [
         "Portuguese (PORTUGUE)",
         [
+            ["89S", "First Year Seminar in Portuguese."],
             ["101", "Elementary Portuguese I."],
             ["102", "Elementary Portuguese II."],
             ["112", "Accelerated Elementary Portuguese."],
@@ -10168,7 +10325,14 @@
             ["590", "Topics in Lusophone Literature and Culture."],
             ["590S", "Topics in Lusophone Literature and Culture."],
             ["590SP", "Preceptorial in Lusophone Literature and Culture."],
-            ["113A", "Beginning Quechua."],
+            ["113A", "Beginning Quechua."]
+        ]
+    ],
+    [
+        "Spanish (SPANISH)",
+        [
+            ["89S", "First-Year Seminar in Spanish."],
+            ["92A", "Culture and Language in Costa Rica."],
             ["101", "Elementary Spanish 1."],
             ["102", "Elementary Spanish 2."],
             ["111", "Intensive Elementary Spanish."],
@@ -10446,7 +10610,12 @@
                 "222FS",
                 "Genetics and Epigenetics: The Codes that Control Our Genomes."
             ],
-            ["291", "Bass Connections: Enabling Precision Medicine."],
+            ["291", "Bass Connections: Enabling Precision Medicine."]
+        ]
+    ],
+    [
+        "Slavic and Eurasian Studies (SES)",
+        [
             [
                 "190A",
                 "Duke Administered Study Abroad: Special Topics in Slavic and Eurasian Studies."
@@ -10564,6 +10733,7 @@
     [
         "Russian (RUSSIAN)",
         [
+            ["89S", "First-Year Seminar."],
             ["101", "Elementary Russian I."],
             ["101SA", "Elementary Russian I."],
             ["102", "Elementary Russian II."],
@@ -10757,6 +10927,11 @@
     [
         "Sociology (SOCIOL)",
         [
+            ["89S", "First-Year Seminar."],
+            [
+                "90A",
+                "Duke-Administered Study Abroad: Special Topics in Sociology."
+            ],
             ["110", "Sociological Inquiry."],
             ["140FS", "On Suffering: How Science and Stories Shape Us."],
             ["148S", "Empires in Modern European History."],
@@ -10926,6 +11101,9 @@
     [
         "Statistical Science (STA)",
         [
+            ["20", "General Statistics."],
+            ["30", "Basic Statistics and Quantitative Literacy."],
+            ["89S", "First-Year Seminar."],
             ["101L", "Data Analysis and Statistical Inference."],
             ["101LA", "Data Analysis and Statistical Inference."],
             ["102L", "Introductory Biostatistics."],
@@ -11018,6 +11196,7 @@
     [
         "Theater Studies (THEATRST)",
         [
+            ["89S", "First-Year Seminar."],
             ["104", "Let\u2019s Dance! Live Art and Performance."],
             ["115", "The Theater Today."],
             ["145S", "Acting."],
@@ -11169,6 +11348,9 @@
     [
         "the Thompson Writing Program (WRITING)",
         [
+            ["65", "Writing Transfer across Contexts."],
+            ["70", "Introduction to Critical Reading and Writing."],
+            ["89S", "First-Year Seminar: Special Topics."],
             ["101", "Academic Writing."],
             ["182", "Public Speaking: Policy Advocacy and Communication."],
             ["190S", "Special Topics: Writing in the Disciplines."],
@@ -11238,7 +11420,12 @@
             ["574", "Modeling and Engineering Gene Circuits (GE, MC)."],
             ["590", "Special Topics in Computational Biology."],
             ["591", "Independent Study."],
-            ["658", "Structural Biochemistry I."],
+            ["658", "Structural Biochemistry I."]
+        ]
+    ],
+    [
+        "Immunology (IMMUNOL)",
+        [
             ["493", "Research Independent Study."],
             ["494", "Research Independent Study."],
             ["544", "Principles of Immunology."],
@@ -11252,7 +11439,12 @@
             [
                 "551L",
                 "Biomedical Optical Spectroscopy and Tissue Optics (GE, IM)."
-            ],
+            ]
+        ]
+    ],
+    [
+        "Molecular Genetics and Microbiology (MGM)",
+        [
             ["120FS", "Ethical Implications of Genetic and Genomic Research."],
             [
                 "222FS",
@@ -11268,7 +11460,12 @@
             ["522", "Critical Readings in Genetics and Genomics."],
             ["552", "Virology."],
             ["582", "Microbial Pathogenesis."],
-            ["593", "Research Independent Study."],
+            ["593", "Research Independent Study."]
+        ]
+    ],
+    [
+        "Neurobiology (NEUROBIO)",
+        [
             ["393", "Research Independent Study."],
             ["559", "The Biological Basis of Music."],
             ["631", "Contemporary Topics in Membrane Biology."],
@@ -11282,6 +11479,7 @@
             ["294", "Research Independent Study in Science Education."],
             ["350", "Pharmacology: Drug Actions and Reactions."],
             ["360", "Drugs, Brain, and Behavior."],
+            ["12L)", "Instructor: Kuhn."],
             ["370", "Pharmacogenomics and Personalized Medicine."],
             ["301", "Instructor: Kwatra."],
             ["393", "Research Independent Study."],
@@ -11738,6 +11936,10 @@
     [
         "Engineering (EGR)",
         [
+            ["79S", "Thrive."],
+            ["89S", "First-Year Seminar."],
+            ["90L", "Introduction to Engineering."],
+            ["95FS", "First Year seminar in Focus."],
             ["101L", "Engineering Design and Communication."],
             ["102L", "Design to Deliver."],
             ["103L", "Computational Methods in Engineering."],
