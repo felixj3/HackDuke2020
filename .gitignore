@@ -5,6 +5,7 @@
 #   git config --global core.excludesfile '~/.gitignore_global'
 
 .vscode
+pythonInterperter
 
 # added by anni
 .DS_Store
