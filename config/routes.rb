@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get "request" => "request_tutor#index"
   get "assist" => "become_tutor#index"
   get "study" => "study#index"
-  post "/request" => "request_tutor#post"
+  post "/assist" => "become_tutor#post" # for submitting tutor form
   post "/profile" => "home#post" # for updating profile
   get "profile" => "home#profile"
   # get "users/sign_in", to: "static_pages#mission", as: "mission"
