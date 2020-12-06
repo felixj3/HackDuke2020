@@ -21,7 +21,8 @@
 <div class="inner">
     <h1><h1/>
     <header class="align-center">
-        <h3>Become a Tutor!</h3>
+        <h3>Become a Tutor! (fill out 1 form per class)</h3>
+        <h1></h1>
     </header>
     <form method="post" action="#">
         <div class="row uniform">
@@ -32,17 +33,18 @@
                 <input type="email" name="email" id="demo-email" value="" placeholder="Email" />
             </div>
             <!-- Break -->
-            <div class="12u$">
-                <div class="select-wrapper">
-                    <select name="demo-category" id="demo-category">
-                        <option value="">- Category -</option>
-                        <option value="1">Manufacturing</option>
-                        <option value="1">Shipping</option>
-                        <option value="1">Administration</option>
-                        <option value="1">Human Resources</option>
-                    </select>
+            <% @courseAbbreviationsAndNames.each do |k, v| %>
+                <div class="12u$">
+                    <div class="select-wrapper">
+                        <select name=<%= "#{k}" %> id=<%= "#{k}" %> >
+                            <option value=""><%= "- #{k} -" %></option>
+                            <% v.each_with_index do |course, index| %>
+                                <option value= <%= "#{index}" %> ><%= "#{course[0]}, #{course[1]}" %></option>
+                            <% end %>
+                        </select>
+                    </div>
                 </div>
-            </div>
+            <% end %>
             <!-- Break -->
             <div class="4u 12u$(small)">
                 <input type="radio" id="demo-priority-low" name="demo-priority" checked>
