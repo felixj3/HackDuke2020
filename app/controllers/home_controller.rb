@@ -8,6 +8,7 @@ class HomeController < ApplicationController
     puts("----------------------------------------\n")
     puts("pre")
     getClubs
+    getCourses
 
     # can only access session info during a GET request
     puts("----------------------------------------\n")
@@ -60,6 +61,15 @@ class HomeController < ApplicationController
     user = User.find_by(id: user_id)
     user.update(category1: categories[0], category2: categories[1], category3: categories[2], category4: categories[3], category5: categories[4], category6: categories[5], category7: categories[6], category8: categories[7], category9: categories[8], category10: categories[9], category11: categories[10], category12: categories[11], name: params[:name])
 
+    getCourses
+    # @courseAbbreviationsAndNames
+    params.each do |k, v|
+      puts "key: #{k}, value: #{v}"
+    end
+
+    # user.update(subject1: , course1: )
+
+    redirect_to root_url
   end
 
 

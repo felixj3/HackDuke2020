@@ -2,9 +2,17 @@
     <div class="inner">
         <a href="/" class="logo"><strong>EDU UP 📚</strong> - Power Education By Creating Community</a>
         <nav id="nav">
-            <a href="/">Home</a>
-            <a href="/users/sign_up">Sign up</a>
-            <a href="/users/sign_in">Log in</a>
+            <% if user_signed_in? %>
+                Logged in as <%= User.find_by(id: current_user.id).name %>
+            <% end %>
+            <a href="/">Home</a> 
+            <% if user_signed_in? %>
+                <a href="/profile">Profile</a>
+                <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+            <% else %>
+                <a href="/users/sign_up">Sign up</a>
+                <a href="/users/sign_in">Log in</a>
+            <% end %>
         </nav>
         <a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
     </div>
