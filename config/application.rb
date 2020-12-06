@@ -18,7 +18,10 @@ module HackDuke2020
 
     $BACKBACKENDPORT = 8000
     config.before_initialize do 
-      IO.popen("python3 mlModel/BackBackEnd/server.py -p " + $BACKBACKENDPORT.to_s)
+      if File.exist?("pythonInterperter")
+        pythonPath = File.open("#{Rails.root}/pythonInterperter").read
+        IO.popen(pythonPath + " mlModel/main.py -p " + $BACKBACKENDPORT.to_s)
+      end
     end
   end
 end
