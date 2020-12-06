@@ -29,7 +29,8 @@
     <form method="post" action="#">
         <div class="row uniform">
             <div class="6u 12u$(xsmall)">
-                <input type="text" name="name" id="demo-name" value="" placeholder="Name" />
+                <input type="text" name="name" id="demo-name" placeholder="Name"
+                value="<%= User.find_by(id: current_user.id).name %>" />
             </div>
             <!-- Break -->
 
