@@ -31,8 +31,11 @@
                 <input type="text" name="name" id="demo-name" placeholder="Name"
                 value="<%= User.find_by(id: current_user.id).name %>" />
             </div>
+            <div class="6u 12u$(xsmall)">
+                <input type="text" name="gradYear" id="gradYear" placeholder="gradYear"
+                value="<%= User.find_by(id: current_user.id).gradYear %>" />
+            </div>
             <!-- Break -->
-
             <div class ="inner">
             <h2> Select up to 5 clubs you are in! </h2>
             </div>
@@ -52,6 +55,32 @@
                 <% num = num + 1 %>
             <% end %>
             <!-- Break -->
+            <div class ="inner">
+            <h2> Select up to 5 of your favorite classes taken! </h2>
+            </div>
+
+            <% num = 1 %>
+            <% while num < 6 do %>
+            <div class="12u$">
+                <div class="select-wrapper">
+                    <select class="course" name= <%= "course#{num}" %> id= <%= "course#{num}" %> >
+                        <option value=""><%= "- Course #{num} -" %></option>
+                        <% @courseAbbreviationsAndNames.each_with_index do |subject, index| %>
+                            <option value= <%= "#{index}" %> ><%= subject %></option>
+                        <% end %>
+                    </select>
+                </div>
+
+                <div class="inner"> 
+                    <% courseSym = "courseNum#{num}" %>
+                    <% courseSym = courseSym.to_sym %>
+                    <input type="text" name=<%= "courseNum#{num}" %> id=<%= "courseNum#{num}" %> value= <%= "User.find_by(id: current_user.id).courseSym" %> placeholder="Course Number" />
+                </div>
+            </div>
+                <% num = num + 1 %>
+            <% end %>
+            <!-- Break -->
+
             <input type-"hidden" style="display: none" name="user_id" value= <%= "#{@curr_user_id}" %> />
 
             <div class="12u$">

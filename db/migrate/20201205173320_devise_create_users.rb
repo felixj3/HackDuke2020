@@ -48,6 +48,9 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.0]
       t.integer :category12
 
       t.string :name
+      t.integer :gradYear
+
+      t.string
 
       t.belongs_to :study_room
 
