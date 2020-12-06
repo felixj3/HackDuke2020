@@ -12,7 +12,12 @@ class ApplicationController < ActionController::Base
     end
 
     def getCurrentUser
-        return User.find_by(id: current_user.id)
+        if !current_user
+            redirect_to new_user_session_path
+            return User.new
+        else
+            return User.find_by(id: current_user.id)
+        end
     end
 
     def getCourses
