@@ -5,14 +5,24 @@ class RequestTutorController < ApplicationController
         params.each do |k,v|
             puts "key: #{k} value: #{v}"
         end
-        puts(params[:name])
+        getCourses
         filter
         render "index"
     end
 
-    # def filter
-    #     @tutors
-    # end 
+    def filter
+        
+        @tutorsFiltered = Array.new
+        @tutors = Tutor.order('created_at DESC')
+        @tutors.each do |tutor|
+            @tutorsFiltered << tutor if (tutor.subject == @courseAbbreviationsAndNames.keys[params[:searchCourseMajor].to_i]) && (tutor.number == params[:searchCourseNumber])
+        end
+        if @tutorsFiltered.count != 0
+            
+            @tutors = @tutorsFiltered
+        end
+        puts("-------------------FINISH THERE---------------------\n")
+    end 
 
     def index
         @tutors = Tutor.order('created_at DESC')
