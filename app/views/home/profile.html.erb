@@ -70,7 +70,13 @@
             <div class="12u$">
                 <div class="select-wrapper">
                     <select class="club" name= <%= "club#{num}" %> id= <%= "club#{num}" %> >
-                        <option value=""><%= "- Club #{num} -" %></option>
+                        <% currClub = "- Club #{num} -" %>
+                        <% clubName = "club#{num}" %>
+                        <% temp = User.find_by(id: current_user.id).attributes[clubName] %>
+                        <% if temp != nil and temp != "" %>
+                            <% currClub = temp %>
+                        <% end %>
+                        <option value="-1"><%= "#{currClub}" %></option>
                         <% @clubs.each_with_index do |club, index| %>
                             <option value= <%= "#{index}" %> ><%= club %></option>
                         <% end %>
