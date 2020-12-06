@@ -25,16 +25,24 @@
                 <input type="text" name="name" id="demo-name" value="" placeholder="Name" />
             </div>
             <!-- Break -->
+            <div class ="inner">
+            <h2> Select up to 5 Clubs you are in! </h2>
+            </div>
+
+            <% num = 1 %>
+            <% while num < 6 do %>
             <div class="12u$">
                 <div class="select-wrapper">
                     <select name="club1" id="club1">
-                        <option value="">- Club 1 -</option>
+                        <option value=""><%= "- Club #{num} -" %></option>
                         <% @clubs.each do |club| %>
                             <option value="1"><%= club %></option>
                         <% end %>
                     </select>
                 </div>
             </div>
+                <% num = num + 1 %>
+            <% end %>
             <!-- Break -->
             <div class="4u 12u$(small)">
                 <input type="radio" id="demo-priority-low" name="demo-priority" checked>
