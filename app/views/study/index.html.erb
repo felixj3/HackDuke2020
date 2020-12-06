@@ -36,7 +36,7 @@
 				<div class="thumbnails">
 				    
 					<% @rooms.each do |room| %>
-						<%a = rand(7)%>
+						<%a = rand(12)%>
 						<%if a == 0%>
 						<div class="box">
 							<a class="image fit"><img src="assets/study1.jpg" alt=""></a>
@@ -120,6 +120,71 @@
 							<a class="image fit"><img src="assets/study7.jpg" alt=""></a>
 							<div class="inner">
 							<div id = "dalaoxr">
+							    <p id = "xr">Major: <%= room.major%></p>
+								<p id = "xr">Capacity: <%= room.current_number_student%>/<%= room.capacity%></p>
+								<p id = "xr">Description: <%= room.description%></p>
+								</div>
+								<a class="button fit">Join</a>
+							</div>
+						</div>
+						<%end%>
+						<%if a == 7%>
+						<div class="box">
+							<a class="image fit"><img src="assets/study8.jpg" alt=""></a>
+							<div class="inner">
+							    <div id = "dalaoxr">
+							    <p id = "xr">Major: <%= room.major%></p>
+								<p id = "xr">Capacity: <%= room.current_number_student%>/<%= room.capacity%></p>
+								<p id = "xr">Description: <%= room.description%></p>
+								</div>
+								<a class="button fit">Join</a>
+							</div>
+						</div>
+						<%end%>
+						<%if a == 8%>
+						<div class="box">
+							<a class="image fit"><img src="assets/study9.jpg" alt=""></a>
+							<div class="inner">
+							    <div id = "dalaoxr">
+							    <p id = "xr">Major: <%= room.major%></p>
+								<p id = "xr">Capacity: <%= room.current_number_student%>/<%= room.capacity%></p>
+								<p id = "xr">Description: <%= room.description%></p>
+								</div>
+								<a class="button fit">Join</a>
+							</div>
+						</div>
+						<%end%>
+						<%if a == 9%>
+						<div class="box">
+							<a class="image fit"><img src="assets/study10.jpg" alt=""></a>
+							<div class="inner">
+							    <div id = "dalaoxr">
+							    <p id = "xr">Major: <%= room.major%></p>
+								<p id = "xr">Capacity: <%= room.current_number_student%>/<%= room.capacity%></p>
+								<p id = "xr">Description: <%= room.description%></p>
+								</div>
+								<a class="button fit">Join</a>
+							</div>
+						</div>
+						<%end%>
+						<%if a == 10%>
+						<div class="box">
+							<a class="image fit"><img src="assets/study11.jpg" alt=""></a>
+							<div class="inner">
+							    <div id = "dalaoxr">
+							    <p id = "xr">Major: <%= room.major%></p>
+								<p id = "xr">Capacity: <%= room.current_number_student%>/<%= room.capacity%></p>
+								<p id = "xr">Description: <%= room.description%></p>
+								</div>
+								<a class="button fit">Join</a>
+							</div>
+						</div>
+						<%end%>
+						<%if a == 11%>
+						<div class="box">
+							<a class="image fit"><img src="assets/study12.jpg" alt=""></a>
+							<div class="inner">
+							    <div id = "dalaoxr">
 							    <p id = "xr">Major: <%= room.major%></p>
 								<p id = "xr">Capacity: <%= room.current_number_student%>/<%= room.capacity%></p>
 								<p id = "xr">Description: <%= room.description%></p>
