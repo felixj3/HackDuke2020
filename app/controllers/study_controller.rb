@@ -10,7 +10,7 @@ class StudyController < ApplicationController
         @rooms.each do |t|
             i = 0
             while i<cnt && @room[i] != nil
-                if @room[i].rank<=t.rank
+                if @room[i].rank>=t.rank
                     tmp = @room[i]
                     @room[i] = t
                     t = tmp
