@@ -34,14 +34,14 @@
                     <select name="major" id="major">
                         <option value="">- Select the department for your course -</option>
                         <% @courseAbbreviationsAndNames.each_with_index do |(k, v), index| %>
-                            <option value= <%= "#{index}" %> ><%= "#{k}" %></option>
+                            <option value= <%= "#{index}" %> ><%= k %></option>
                         <% end %>
                     </select>
                 </div>
                 
                 
                 <div class="col-lg-3 col-md-4 col-sm-7 col-xs-7">		
-                <input id="courseNum" type="number" value="" placeholder="Course Number" >	
+                <input name="courseNum" id="courseNum" type="number" value="" placeholder="Course Number" >	
                 </div>
                 <!-- Break -->
             <div class="12u$">

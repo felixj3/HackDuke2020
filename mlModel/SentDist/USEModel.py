@@ -9,6 +9,7 @@ Created on Sat Dec  5 17:40:13 2020
 import nltk
 #nltk.download('punkt')
 import numpy as np
+import json
 
 class SentVSP():
     def __init__(self, sentence, sbert_model):
@@ -25,14 +26,26 @@ def SingletSim(u1, u2, sbert_model):
     sim = u1Dat.simMeasure(u2)
     return sim
 
+def FindCourse(course, course_dict):
+    title = course_dict[course]
+    try:
+        title[0]
+        return title
+    except:
+        return course
+
 def WordSim(u1, u2, sbert_model):
+    with open("courses.json", 'w') as json_file:
+        course_dict = json.load(json_file)
     similarities = []
     if len(u1) == 0 or len(u2) == 0:
         return 0
     for u1Course in u1:
-        currCourse = SentVSP(u1, sbert_model)
+        u1Course = FindCourse(u1Course, course_dict)
+        currCourse = SentVSP(u1Course, sbert_model)
         for u2Course in u2:
-            sim = currCourse.simMeasure(u2)
+            u2Course = FindCourse(u2Course, course_dict)
+            sim = currCourse.simMeasure(u2Course)
             similarities.append(sim)
     if len(similarities) > 5:
         similarities.sort()
