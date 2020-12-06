@@ -43,9 +43,10 @@
                 <% end %>
             </select>
         <h4>Briefly describe the room you are going to create.</h4>
-        <input type= "text" class="form-control" name="description" id="description">
+        <input type= "text" class="form-control club" name="description" id="description">
         <h4>Provide the zoom link for the study room here.</h4>
-        <input type= "text" class="form-control" name="description" id="description">
+        <input type= "text" class="form-control club" name="zoom_link" id="zoom_link">
+        <input type= "hidden" style="display: none" name="user_id" value= <%= "#{@curr_user_id}" %> />
         <div class="12u$" id="xrtqqql">
             <ul class="actions">
                 <li><input type="submit" value="Create Room" /></li>

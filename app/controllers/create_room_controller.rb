@@ -1,12 +1,15 @@
 class CreateRoomController < ApplicationController
   def index
     getCourses
+    @curr_user_id = current_user.id
   end
 
   def post
-    room = StudyRoom.create(rank: 0, capacity: params[:capacity].to_i, current_number_student:1, major: params[:major], description: params[:description])
-    user = User.find_by(id: params[:user_id])
-    user.StudyRoom << room
+    getCourses
+    room = StudyRoom.create(rank: 0, capacity: params[:capacity].to_i, current_number_student:1, major: params[:major], description: params[:description], zoom_link: params[:zoom_link])
+    user_id = params[:user_id]
+    user = User.find_by(id: user_id)
+    room.users << user
     redirect_to root_url
   end
 
@@ -19,7 +22,6 @@ class CreateRoomController < ApplicationController
     data.sort.map do |k, v|
         @courseAbbreviationsAndNames[k] = v
     end
-
 
     @courseAbbreviationsAndNames.each do |k, v|
         # puts "key: #{k}"

@@ -5,5 +5,4 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
     has_many :tutors
-  # belongs_to :study_room
 end

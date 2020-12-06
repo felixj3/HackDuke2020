@@ -3381,6 +3381,7 @@
 
 		.club {
 			background: white;
+			color: black;
 		}
 
 		.row.find-a-tutor {
@@ -3414,6 +3415,12 @@
 }
 
 #description{
+	padding-top:10px;
+	padding-bottom: 6px;	
+	background-color:white;
+}
+
+#zoom_link{
 	padding-top:10px;
 	padding-bottom: 6px;	
 	background-color:white;

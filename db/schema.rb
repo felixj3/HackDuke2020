@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_06_163614) do
+ActiveRecord::Schema.define(version: 2020_12_06_173910) do
 
   create_table "feedbacks", force: :cascade do |t|
     t.float "courseDis"
