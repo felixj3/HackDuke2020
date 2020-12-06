@@ -18,8 +18,7 @@ ActiveRecord::Schema.define(version: 2020_12_06_173910) do
     t.float "majorDis"
     t.float "gradDis"
     t.float "involvDot"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.float "rating"
   end
 
   create_table "study_rooms", force: :cascade do |t|
@@ -29,6 +28,7 @@ ActiveRecord::Schema.define(version: 2020_12_06_173910) do
     t.string "major"
     t.string "description"
     t.string "zoom_link"
+    t.float "rating"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

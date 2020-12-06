@@ -6,8 +6,9 @@ class CreateFeedbacks < ActiveRecord::Migration[6.0]
       t.float :majorDis
       t.float :gradDis
       t.float :involvDot
+      t.float :rating
 
-      t.timestamps
+      # t.timestamps
     end
   end
 end
