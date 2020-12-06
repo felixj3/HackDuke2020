@@ -63,12 +63,31 @@ class HomeController < ApplicationController
 
     getCourses
     courseNames = @courseAbbreviationsAndNames.keys
-    userCourses = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    userCourses = ["", "", "", "", "", "", "", "", "", ""]
     # userCourses[2i] = subject(i+1)
     # userCourses[2i+1] = course(i+1)
+    currNum = 1
+    second = false #since there is course1 and courseNum1, after the 1 is used twice, increment it
     params.each do |k, v|
       puts "key: #{k}, value: #{v}"
-      
+      if k.to_s.include? "course"
+        if !second
+          if v.to_i != -1
+            userCourses[(currNum-1)*2] = courseNames[v.to_i]
+          end
+          second = true
+        else
+          userCourses[(currNum-1)*2 + 1] = v
+          currNum = currNum + 1
+          second = false
+        end
+      end
+    end
+    
+    user.update(subject1: userCourses[0], course1: userCourses[1], subject2: userCourses[2], course2: userCourses[3], subject3: userCourses[4], course3: userCourses[5], subject4: userCourses[6], course4: userCourses[7], subject5: userCourses[8], course5: userCourses[9])
+
+    userCourses.each do |c|
+      puts c
     end
 
     if params[:major].to_i != -1
@@ -78,7 +97,7 @@ class HomeController < ApplicationController
     if params[:gradYear] != ""
       user.update(gradYear: params[:gradYear])
     end
-    # user.update(subject1: , course1: )
+    
 
     user.save
     redirect_to root_url

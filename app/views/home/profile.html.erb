@@ -78,7 +78,9 @@
             <div class="12u$">
                 <div class="field half first select-wrapper">
                     <select class="course" name= <%= "course#{num}" %> id= <%= "course#{num}" %> >
-                        <option value=""><%= "- Course #{num} -" %></option>
+                        <% currCourse = "- Course #{num} -" %>
+                        
+                        <option value="-1"><%= "- Course #{num} -" %></option>
                         <% @courseAbbreviationsAndNames.each_with_index do |(subject, courses), index| %>
                             <option value= <%= "#{index}" %> ><%= subject %></option>
                         <% end %>
