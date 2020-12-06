@@ -25,14 +25,27 @@
 </section>
 
 <div class="inner">
-    <h6></h6>
     <form method="post" action="#">
         <div class="row uniform">
             <div class="6u 12u$(xsmall)">
-                <input type="text" name="name" id="demo-name" value="" placeholder="Name" />
+                <input type="text" name="name" id="demo-name" placeholder="Name"
+                value="<%= User.find_by(id: current_user.id).name %>" />
+            </div>
+            <div class="6u 12u$(xsmall)">
+                <input type="text" name="gradYear" id="gradYear" placeholder="Graduation Year (ex. 2024)"
+                value="<%= User.find_by(id: current_user.id).gradYear %>" />
+            </div>
+            <div class="12u$">
+                <div class="select-wrapper">
+                    <select name="major" id="major" >
+                        <option value="-1"><%= "#{User.find_by(id: current_user.id).major}" %></option>
+                        <% @courseAbbreviationsAndNames.each_with_index do |(subject, courses), index| %>
+                            <option value= <%= "#{index}" %> ><%= subject %></option>
+                        <% end %>
+                    </select>
+                </div>
             </div>
             <!-- Break -->
-
             <div class ="inner">
             <h2> Select up to 5 clubs you are in! </h2>
             </div>
@@ -52,7 +65,33 @@
                 <% num = num + 1 %>
             <% end %>
             <!-- Break -->
-            <input type-"hidden" style="display: none" name="user_id" value= <%= "#{@curr_user_id}" %> />
+            <div class ="inner">
+            <h2> Select up to 5 of your favorite classes taken! </h2>
+            </div>
+
+            <% num = 1 %>
+            <% while num < 6 do %>
+            <div class="12u$">
+                <div class="select-wrapper">
+                    <select class="course" name= <%= "course#{num}" %> id= <%= "course#{num}" %> >
+                        <option value=""><%= "- Course #{num} -" %></option>
+                        <% @courseAbbreviationsAndNames.each_with_index do |(subject, courses), index| %>
+                            <option value= <%= "#{index}" %> ><%= subject %></option>
+                        <% end %>
+                    </select>
+                </div>
+
+                <div class="inner"> 
+                    <% courseSym = "course#{num}" %>
+                    
+                    <input type="text" name= <%= "courseNum#{num}" %> id= <%= "courseNum#{num}" %> value= "<%= User.find_by(id: current_user.id).attributes[courseSym] %>" placeholder="Course Number" />
+                </div>
+            </div>
+                <% num = num + 1 %>
+            <% end %>
+            <!-- Break -->
+
+            <input type="hidden" style="display: none" name="user_id" value= <%= "#{@curr_user_id}" %> />
 
             <div class="12u$">
                 <ul class="actions">

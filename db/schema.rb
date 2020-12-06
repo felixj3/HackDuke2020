@@ -62,6 +62,18 @@ ActiveRecord::Schema.define(version: 2020_12_06_050422) do
     t.integer "category11"
     t.integer "category12"
     t.string "name"
+    t.integer "gradYear"
+    t.string "subject1"
+    t.string "course1"
+    t.string "subject2"
+    t.string "course2"
+    t.string "subject3"
+    t.string "course3"
+    t.string "subject4"
+    t.string "course4"
+    t.string "subject5"
+    t.string "course5"
+    t.string "major"
     t.integer "study_room_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
