@@ -19,63 +19,72 @@
 </section>
 
 
-<div class="inner">
-    <header class="align-center">
-        <h3>Form</h3>
-    </header>
-    <form method="post" action="#">
-        <div class="row uniform">
-            <div class="6u 12u$(xsmall)">
-                <input type="text" name="name" id="demo-name" value="" placeholder="Name" />
-            </div>
-            <div class="6u$ 12u$(xsmall)">
-                <input type="email" name="email" id="demo-email" value="" placeholder="Email" />
-            </div>
-            <!-- Break -->
-            <div class="12u$">
-                <div class="select-wrapper">
-                    <select name="demo-category" id="demo-category">
-                        <option value="">- Category -</option>
-                        <option value="1">Manufacturing</option>
-                        <option value="1">Shipping</option>
-                        <option value="1">Administration</option>
-                        <option value="1">Human Resources</option>
-                    </select>
-                </div>
-            </div>
-            <!-- Break -->
-            <div class="4u 12u$(small)">
-                <input type="radio" id="demo-priority-low" name="demo-priority" checked>
-                <label for="demo-priority-low">Low Priority</label>
-            </div>
-            <div class="4u 12u$(small)">
-                <input type="radio" id="demo-priority-normal" name="demo-priority">
-                <label for="demo-priority-normal">Normal Priority</label>
-            </div>
-            <div class="4u$ 12u$(small)">
-                <input type="radio" id="demo-priority-high" name="demo-priority">
-                <label for="demo-priority-high">High Priority</label>
-            </div>
-            <!-- Break -->
-            <div class="6u 12u$(small)">
-                <input type="checkbox" id="demo-copy" name="demo-copy">
-                <label for="demo-copy">Email me a copy of this message</label>
-            </div>
-            <div class="6u$ 12u$(small)">
-                <input type="checkbox" id="demo-human" name="demo-human" checked>
-                <label for="demo-human">I am a human and not a robot</label>
-            </div>
-            <!-- Break -->
-            <div class="12u$">
-                <textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-            </div>
-            <!-- Break -->
-            <div class="12u$">
-                <ul class="actions">
-                    <li><input type="submit" value="Send Message" /></li>
-                    <li><input type="reset" value="Reset" class="alt" /></li>
-                </ul>
-            </div>
-        </div>
-    </form>
+
+ 
+
+<section id="main" class="wrapper">
+    <div class="inner">
+        <header class="align-center">
+            <h1>Find a tutor!</h1>
+            
+        </header>
+    </div>
+</section>
+
+<form action="/search" method="POST" role="search" class="">
+
+<div class="container">
+  <div class="row">
+  	<div class="col-lg-7 col-md-4 col-sm-1 col-xs-1">		
+	</div>
+    <div class="col-lg-3 col-md-4 col-sm-7 col-xs-7">		
+		<input id="search-bar" type="text" aria-label="Search">	
+	</div>
+    <div class="col-lg-1 col-md-2 col-sm-2 col-xs-2">
+		<button type="submit" class="button special icon fa-search" id="search-button">
+			Search
+		</button>
+		
+	</div>
+	
+  </div>
+  
 </div>
+</form>
+
+
+
+<div class="row gallery">
+	
+	<% @tutors.each do |tutor| %>
+	<div class="col-lg-3 col-md-4 col-sm-6 gallery-box card">
+		
+		<div class="card-body">
+			<div class="card-title"><h5><%= tutor.subject + " " + tutor.number %></h5></div>
+			<div class="card-content">
+				
+				<p>
+				<h5>Grade received by tutor (optional):</h5><%= tutor.grade %><br>
+				
+                <h5>Number of hours willing to tutor:</h5><%= tutor.availability %><br>
+				
+				<h5>Desired pay range:</h5><%= tutor.pay %><br>
+				</p> 
+			</div>
+			<div class="card-button">
+				<a href="/projects/{{$project->id}}" class="button">Connect me!</a>
+			</div>
+			
+			
+		</div>
+	</div>
+		
+	<% end %>
+	
+</div>
+
+
+
+
+
+

@@ -2690,6 +2690,15 @@
 
 		}
 
+		#search-bar {
+			background:white;
+			color: #8dcca9;
+		}
+
+		#search-button {
+			padding-right: 20px;
+		}
+
 /* Header */
 
 	.subpage {
@@ -3174,4 +3183,26 @@
 				padding: 3em 0;
 			}
 
+		}
+
+		.row.gallery {
+			align-items: flex-start;
+			padding-left: 2%;
+			padding-right: 2%;
+		}
+		.gallery-box {
+			margin-top: 15px;
+			margin-bottom: 3px;
+			padding-left: 3px !important;
+			padding-right: 3px !important;
+			color: rgb(109, 107, 107);
+			font-size: 80%;
+			text-align: center;
+			border-radius: 4px;
+			
+			
+			overflow: hidden;
+		}
+		.card-body {
+			font-size: medium;
 		}
