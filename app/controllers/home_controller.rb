@@ -60,6 +60,8 @@ class HomeController < ApplicationController
     # above code puts how many clubs the user does in each category, using the categories array
     user = User.find_by(id: user_id)
     user.update(category1: categories[0], category2: categories[1], category3: categories[2], category4: categories[3], category5: categories[4], category6: categories[5], category7: categories[6], category8: categories[7], category9: categories[8], category10: categories[9], category11: categories[10], category12: categories[11], name: params[:name])
+    
+    user.update(hometown: params[:hometown])
 
     getCourses
     courseNames = @courseAbbreviationsAndNames.keys
