@@ -16,3 +16,33 @@
 <section class="banner find-study-room subbanner" >
 <h2 color="white">Study</h2>
 </section>
+
+<div class="row gallery">
+	
+	<% @StudyRooms.each do |z| %>
+	<div class="col-lg-3 col-md-4 col-sm-6 gallery-box card">
+		
+		<div class="card-body">
+			<div class="card-title"><h5><%= tutor.subject + " " + tutor.number %></h5></div>
+			<div class="card-content">
+				
+				<p>
+				<h5>Grade received by tutor (optional):</h5><%= tutor.grade %><br>
+				
+                <h5>Number of hours willing to tutor:</h5><%= tutor.availability %><br>
+				
+				<h5>Desired pay range:</h5><%= tutor.pay %><br>
+				</p> 
+			</div>
+			<div class="card-button">
+                <h5>Desired pay range:</h5><%= tutor.pay %>
+				<a class="button">Connect me!</a>
+			</div>
+			
+			
+		</div>
+	</div>
+		
+	<% end %>
+	
+</div>

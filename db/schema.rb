@@ -25,10 +25,8 @@ ActiveRecord::Schema.define(version: 2020_12_05_214750) do
     t.string "grade"
     t.string "availability"
     t.string "pay"
-    t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_tutors_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -37,25 +35,10 @@ ActiveRecord::Schema.define(version: 2020_12_05_214750) do
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer "category1"
-    t.integer "category2"
-    t.integer "category3"
-    t.integer "category4"
-    t.integer "category5"
-    t.integer "category6"
-    t.integer "category7"
-    t.integer "category8"
-    t.integer "category9"
-    t.integer "category10"
-    t.integer "category11"
-    t.integer "category12"
-    t.string "name"
-    t.integer "study_room_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
-    t.index ["study_room_id"], name: "index_users_on_study_room_id"
   end
 
 end
