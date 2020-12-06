@@ -1,8 +1,12 @@
 class BecomeTutorController < ApplicationController
+    # GET /assist
     def index
+        # called before form is filled out
         getCourses
+        @curr_user_id = current_user.id
     end
 
+    # POST /assist
     def post
     end
 
