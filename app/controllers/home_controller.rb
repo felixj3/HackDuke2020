@@ -34,6 +34,7 @@ class HomeController < ApplicationController
     puts("----------------------------------------\n")
     @userClubs = Array.new
     user_id = params[:user_id]
+    clubIndex = 1
     params.each do |k,v|
         puts "key: #{k} value: #{v}"
         if v != "" and k.to_s.include? "club"
@@ -74,6 +75,8 @@ class HomeController < ApplicationController
         if !second
           if v.to_i != -1
             userCourses[(currNum-1)*2] = courseNames[v.to_i]
+          else
+            userCourses[(currNum-1)*2] = user.attributes["subject#{currNum}"]
           end
           second = true
         else
@@ -83,7 +86,7 @@ class HomeController < ApplicationController
         end
       end
     end
-    
+
     user.update(subject1: userCourses[0], course1: userCourses[1], subject2: userCourses[2], course2: userCourses[3], subject3: userCourses[4], course3: userCourses[5], subject4: userCourses[6], course4: userCourses[7], subject5: userCourses[8], course5: userCourses[9])
 
     userCourses.each do |c|

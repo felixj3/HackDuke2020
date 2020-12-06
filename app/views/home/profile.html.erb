@@ -85,8 +85,12 @@
                 <div class="field half first select-wrapper">
                     <select class="course" name= <%= "course#{num}" %> id= <%= "course#{num}" %> >
                         <% currCourse = "- Course #{num} -" %>
-                        
-                        <option value="-1"><%= "- Course #{num} -" %></option>
+                        <% courseName = "subject#{num}" %>
+                        <% temp = User.find_by(id: current_user.id).attributes[courseName] %>
+                        <% if temp != nil and temp != "" %>
+                            <% currCourse = temp %>
+                        <% end %>
+                        <option value="-1"><%= "#{currCourse}" %></option>
                         <% @courseAbbreviationsAndNames.each_with_index do |(subject, courses), index| %>
                             <option value= <%= "#{index}" %> ><%= subject %></option>
                         <% end %>
@@ -95,7 +99,6 @@
 
                 <div class="field half"> 
                     <% courseSym = "course#{num}" %>
-                    
                     <input type="text" name= <%= "courseNum#{num}" %> id= <%= "courseNum#{num}" %> value= "<%= User.find_by(id: current_user.id).attributes[courseSym] %>" placeholder="Course Number" />
                 </div>
             </div>
