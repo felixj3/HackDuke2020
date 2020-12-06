@@ -50,7 +50,18 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.0]
       t.string :name
       t.integer :gradYear
 
-      t.string
+      t.string :subject1
+      t.string :course1
+      t.string :subject2
+      t.string :course2
+      t.string :subject3
+      t.string :course3
+      t.string :subject4
+      t.string :course4
+      t.string :subject5
+      t.string :course5
+
+      t.string :major
 
       t.belongs_to :study_room
 
