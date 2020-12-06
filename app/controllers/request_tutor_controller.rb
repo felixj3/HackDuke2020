@@ -8,4 +8,10 @@ class RequestTutorController < ApplicationController
         puts(params[:name])
         
     end
+
+    def index
+        @tutors = Tutor.order('created_at DESC')
+        
+    end
+
 end
