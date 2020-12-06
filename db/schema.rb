@@ -75,6 +75,12 @@ ActiveRecord::Schema.define(version: 2020_12_06_163614) do
     t.string "course4"
     t.string "subject5"
     t.string "course5"
+    t.string "hometown"
+    t.string "club1"
+    t.string "club2"
+    t.string "club3"
+    t.string "club4"
+    t.string "club5"
     t.string "major"
     t.integer "study_room_id"
     t.datetime "created_at", precision: 6, null: false
