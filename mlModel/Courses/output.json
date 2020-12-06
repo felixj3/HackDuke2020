@@ -1806,7 +1806,6 @@
             ["215", "Introduction to Mathematical Modeling in Biology."],
             ["218", "Biological Clocks: How Organisms Keep Time."],
             ["220", "Cell Biology."],
-            ["203L", "Instructor: McClay, D."],
             [
                 "221D",
                 "Developmental Biology: Development, Stem Cells, and Regeneration."
@@ -1872,7 +1871,6 @@
             ["326S", "Evolutionary Genomics."],
             ["329D", "Principles of Animal Physiology."],
             ["329L", "Principles of Animal Physiology."],
-            ["101DL", "Instructor: Patek."],
             ["330L", "Comparative and Functional Anatomy of the Vertebrates."],
             ["335A", "Drones in Marine Biology, Ecology, and Conservation."],
             ["335LA", "Drones in Marine Biology, Ecology, and Conservation."],
@@ -1934,7 +1932,6 @@
                 "Human Embryology: Reproductive Biology in the 21st Century."
             ],
             ["432S", "Biology of Host-Pathogen Interactions."],
-            ["203L", "Instructor: Haase."],
             ["445A", "Climate Change in the Marine Environment."],
             ["450S", "Genomics of Adaptation: A Modern Look at Evolution."],
             ["452S", "Genes & Development."],
@@ -1985,7 +1982,6 @@
             ["571A", "Sojourn in Singapore: Urban Tropical Ecology."],
             ["579LA", "Biological Oceanography."],
             ["588S", "Macroevolution."],
-            ["202L", "Instructor: Roth."],
             ["590", "Topics in Biology."],
             ["590S", "Seminar (Topics)."],
             ["627", "Molecular Ecology."],
@@ -2082,7 +2078,6 @@
             ["250S", "Child Policy Research."],
             ["290", "Selected Child Policy Research Topics."],
             ["290S", "Selected Child Policy Research Seminar Topics."],
-            ["290", "Instructor: Staff."],
             ["393", "Research Independent Study."],
             [
                 "495S",
@@ -3340,7 +3335,6 @@
             ],
             ["331SA", "The Economics of the Energiewende in Germany."],
             ["333", "Private Equity."],
-            ["372", "Instructor: Forlines."],
             ["334", "Health Economics."],
             ["335", "Economics of Global Health."],
             ["336D", "Computational Microeconomics."],
@@ -3535,7 +3529,6 @@
             ["656S", "International Monetary Economics."],
             ["664", "Industrial Organization."],
             ["665", "Market Power and Public Policy."],
-            ["608D", "Instructor: Staff."],
             ["667", "Computer Modeling."],
             ["671", "Financial Markets and Investments."],
             [
@@ -3876,7 +3869,6 @@
             ["372S", "Modern American Poetry."],
             ["373", "American Literature, Cold War and After."],
             ["373S", "Studies in American Literature, Cold War and After."],
-            ["373", "Instructor: Staff."],
             ["374", "Contemporary American Writers."],
             ["375S", "Popular Fictions."],
             ["376S", "The Detective Novel."],
@@ -4044,7 +4036,6 @@
                 "239",
                 "Introduction to Atmospheric Chemistry: From Air Pollution to Climate Change."
             ],
-            ["101DL", "Instructor: Kasibhatla."],
             ["240S", "Biodiversity Issues and Field Methods."],
             ["245", "The Theory and Practice of Sustainability."],
             ["265", "Environmental Law and Policy."],
@@ -4459,7 +4450,6 @@
             ["341", "Primate Sexuality."],
             ["341D", "Primate Sexuality."],
             ["344L", "Primate Field Biology."],
-            ["202L", "Instructor: Digby."],
             [
                 "347D",
                 "Behavioral Ecology and the Evolution of Animal Behavior."
@@ -6505,10 +6495,6 @@
             ],
             ["495S", "Senior Honors Seminar."],
             ["496S", "Senior Honors Seminar."],
-            [
-                "495S",
-                "Open to seniors majoring in International Comparative Studies."
-            ],
             ["503S", "Cartographies of Gender and Sexuality in Middle East."],
             [
                 "504S",
@@ -7060,7 +7046,6 @@
                 "390S-15",
                 "Special Topics in North American Literature and Culture."
             ],
-            ["390", "Instructor: Staff."],
             ["390S-2", "Special Topics in Literary Movements."],
             ["390S-3", "Special Topics in Individual Authors."],
             ["390S-4", "Special Topics in Film."],
@@ -7278,7 +7263,6 @@
             ["218-1", "Matrices and Vector Spaces."],
             ["218-2", "Matrices and Vectors."],
             ["218L", "Matrices and Vector Spaces: Optional Lab Section."],
-            ["218-1", "Instructor: Staff."],
             ["221", "Linear Algebra and Applications."],
             ["222", "Advanced Multivariable Calculus."],
             [
@@ -7912,7 +7896,6 @@
             ["350", "Pharmacology: Drug Actions and Reactions."],
             ["351S", "Neuroplasticity and Expertise."],
             ["352S", "Social and Affective Neuroscience."],
-            ["224D", "Instructor: LaBar."],
             [
                 "353S",
                 "Neuroplasticity and Disease: Molecules, Cells, and Circuits."
@@ -9090,10 +9073,8 @@
             ["450S", "The Psychology of Trauma and Memory."],
             ["451S", "Autobiographical Memory."],
             ["453S", "Mind Wandering and Inattention."],
-            ["333", "Instructor: Seli."],
             ["461S", "Neurobiology of Learning and Memory."],
             ["462S", "Neuroscience Applications for Everyday Decision Making."],
-            ["303", "Instructor: G."],
             ["469S", "Cognitive Control and the Prefrontral Cortex."],
             ["470S", "Cognitive Neuroscience of Memory."],
             ["471S", "Reward and Addiction."],
@@ -10324,8 +10305,7 @@
             ["497T-1", "Tutorial in Lusophone Literature and Culture."],
             ["590", "Topics in Lusophone Literature and Culture."],
             ["590S", "Topics in Lusophone Literature and Culture."],
-            ["590SP", "Preceptorial in Lusophone Literature and Culture."],
-            ["113A", "Beginning Quechua."]
+            ["590SP", "Preceptorial in Lusophone Literature and Culture."]
         ]
     ],
     [
@@ -10381,10 +10361,6 @@
                 "315A",
                 "Language and Culture of Entrepreneurship in Latin America."
             ],
-            [
-                "303",
-                "Satisfies one course requirement for Spanish majors or minors."
-            ],
             ["316S", "Global Humanities in Spanish."],
             ["327S", "Spanish for Freshmen and Sophomores."],
             ["331S", "Introduction to Literature, Film, and Popular Culture."],
@@ -10436,7 +10412,6 @@
             ],
             ["410", "Spanish Literature of the Renaissance and the Baroque."],
             ["411", "Golden Age Literature: Cervantes."],
-            ["335", "Instructor: Staff."],
             [
                 "412S",
                 "Mayas, Aztecs, and Incas: The World According to the Indigenous People of Latin America."
@@ -11137,7 +11112,6 @@
             ["391", "Independent Study."],
             ["393", "Research Independent Study."],
             ["410L", "Multilevel and Hierarchical Models."],
-            ["360", "Recommended prerequisite: R programming skills."],
             [
                 "432",
                 "Theory and Methods of Statistical Learning and Inference."
@@ -11479,9 +11453,7 @@
             ["294", "Research Independent Study in Science Education."],
             ["350", "Pharmacology: Drug Actions and Reactions."],
             ["360", "Drugs, Brain, and Behavior."],
-            ["12L)", "Instructor: Kuhn."],
             ["370", "Pharmacogenomics and Personalized Medicine."],
-            ["301", "Instructor: Kwatra."],
             ["393", "Research Independent Study."],
             ["394", "Research Independent Study."],
             ["471S", "Reward and Addiction."],
@@ -11586,7 +11558,6 @@
             ["515", "Neural Prosthetic Systems (GE, EL, IM)."],
             ["517", "Neuronal Control of Movement (GE, EL)."],
             ["518L", "Modern Neuroscience Tools (GE, IM, EL)."],
-            ["301L", "Instructor: Gong."],
             [
                 "521",
                 "Biomaterials: Interfaces between Materials and Biology (GE, MC, BB)."
@@ -11813,7 +11784,6 @@
                 "Fields and Waves: Fundamentals of Information Propagation."
             ],
             ["280L", "Introduction to Signals and Systems."],
-            ["253L)", "Instructor: Collins, Gustafson, Huettel, or Tarokh."],
             ["290", "Special Topics in Electrical and Computer Engineering."],
             ["291", "Projects in Electrical and Computer Engineering."],
             ["292", "Projects in Electrical and Computer Engineering."],
@@ -11827,11 +11797,9 @@
             ["356", "Computer Network Architecture."],
             ["364", "Performance and Technology: Composition Workshop."],
             ["380", "Introduction to Random Signals and Noise."],
-            ["212", "Instructor: Nolte."],
             ["381", "Fundamentals of Digital Signal Processing."],
             ["382L", "Control of Dynamic Systems."],
             ["383", "Introduction to Robotics and Automation."],
-            ["224L", "Instructor: Staff."],
             ["384LA", "Sound in the Sea: Introduction to Marine Bioacoustics."],
             ["391", "Projects in Electrical and Computer Engineering."],
             ["392", "Projects in Electrical and Computer Engineering."],
@@ -11840,7 +11808,6 @@
             ["458", "Engineering Software for Maintainability."],
             ["459", "Introduction to Embedded Systems."],
             ["461", "Ocean Engineering."],
-            ["102", "Instructor: Brooke, Nowacek."],
             ["480", "Applied Probability for Statistical Learning."],
             ["483", "Introduction to Digital Communication Systems."],
             ["485", "Digital Audio and Acoustic Signal Processing."],
@@ -11921,7 +11888,6 @@
             ["651", "Software Engineering."],
             ["652", "Advanced Computer Architecture II."],
             ["675", "Optical Imaging and Spectroscopy."],
-            ["280L", "Instructor: Brady."],
             ["676", "Lens Design."],
             ["681", "Pattern Classification and Recognition Technology."],
             ["682D", "Probabilistic Machine Learning."],
