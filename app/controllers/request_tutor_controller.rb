@@ -5,8 +5,6 @@ class RequestTutorController < ApplicationController
         params.each do |k,v|
             puts "key: #{k} value: #{v}"
         end
-        
-        
         getCourses
         filter
         render "index"
