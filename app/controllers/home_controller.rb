@@ -11,10 +11,13 @@ class HomeController < ApplicationController
 
     # can only access session info during a GET request
     puts("----------------------------------------\n")
-    # need to find current user
+    # need to find current user, can do it in a GET request
     puts current_user.id
 
     puts("----------------------------------------\n")
+
+    # I pass this value to the form and then back after the form is submitted in order to get the post request method to see this id
+    @curr_user_id = current_user.id
   end
 
   # POST /profile
@@ -28,6 +31,7 @@ class HomeController < ApplicationController
     end
     puts("----------------------------------------\n")
     @userClubs = Array.new
+    user_id = params[:user_id]
     params.each do |k,v|
         puts "key: #{k} value: #{v}"
         if v != "" and k.to_s.include? "club"
