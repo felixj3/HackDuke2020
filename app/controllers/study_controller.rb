@@ -1,6 +1,14 @@
 class StudyController < ApplicationController
 
     def index
+
+        if !current_user
+            redirect_to new_user_session_path
+            return
+        end
+
+        @rooms = contact_python(cmd: "fetchStudy", user: current_user.id)
+
         @rooms = StudyRoom.order('created_at DESC')
         cnt = 0
         @rooms.each do |room|
