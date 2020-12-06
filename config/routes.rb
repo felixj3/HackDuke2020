@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get "profile" => "home#profile"
   get "newroom" => "create_room#index"
   post "/newroom" => "create_room#post"
+  get "user.json" => "application#getUserJSON"
   # get "users/sign_in", to: "static_pages#mission", as: "mission"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

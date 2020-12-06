@@ -11,6 +11,10 @@ class ApplicationController < ActionController::Base
         return JSON.parse(res.body)
     end
 
+    def getUserJSON
+        render json: {data: User.all}, status: :ok
+    end
+
     def getCurrentUser
         if !current_user
             redirect_to new_user_session_path
