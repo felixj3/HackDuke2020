@@ -10,6 +10,7 @@ import asyncio
 
 from Xenia import *
 
+
 conn = create_connection('db/development.sqlite3')
 
 sbert_model = InitBert()
@@ -39,8 +40,8 @@ class JobServerHandler(tornado.web.RequestHandler):
             InsertInstance(conn, data['u1'], data['u2'], data['rating'], sbert_model, gmaps)
         elif data['cmd'] == 'fetchStudy':
             
-            self.write(json.dumps([0,1,2,3,4]))
-            # return InferenceRoom(conn, data['user'], None, sbert_model, gmaps)
+            # self.write(json.dumps([0,1,2,3,4]))
+            self.write(json.dumps(InferenceRoom(conn, data['user'], None, sbert_model, gmaps, 'mlModel/Params')))
         else:
             self.write(123)
 

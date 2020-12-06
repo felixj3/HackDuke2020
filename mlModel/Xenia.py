@@ -18,6 +18,8 @@ from torch.utils.data import DataLoader
 import torch
 import datetime
 
+from Model import *
+
 def InitGMapAPI():
     KeyFile = open("key.txt", "r")
     key = KeyFile.read()
@@ -176,21 +178,22 @@ def getUserRoom(conn, u1):
     ratings = c.fetchall()[0][0]
     return ratings
 
-def InsertInstance(conn, u1, u2, sbert_model, gmaps):
+def InsertInstance(conn, u1, u2, ratings, sbert_model, gmaps):
     courseDis = CourseDis(conn, u1, u2, sbert_model)
     homeDis = HomeDis(conn, u1, u2, gmaps)
     majorDis = MajorDis(conn, u1, u2, sbert_model)
     gradDis = GradDis(conn, u1, u2)
     involveDot = InvolvDot(conn, u1, u2)
-    ratings = getUserRoom(conn, u1)
+    # ratings = getUserRoom(conn, u1)
+    # ratings = 4
     dt = datetime.datetime.now()
     instanceId = int(dt.strftime("%Y%m%d%H%M%S"))
-    dat = ((instanceId, courseDis, homeDis, majorDis, gradDis, involveDot, ratings, ))
+    dat = ((instanceId, courseDis, homeDis, majorDis, float(gradDis), involveDot, float(ratings), ), )
     try:
         c = conn.cursor()
         c.executemany("""INSERT INTO feedbacks(id, courseDis, homeDis, 
-                      majorDis, gradDis, involvDot,rating) 
-                      VALUES(?, ?, ?, ?, ?, ?, ?, ?)""", dat)
+                      majorDis, gradDis, involvDot, rating) 
+                      VALUES(?, ?, ?, ?, ?, ?, ?)""", dat)
         conn.commit()
     except:
         print("error")
@@ -206,11 +209,11 @@ def getData(conn):
 
 def SelectRooms(conn):
     Query = """SELECT id FROM study_rooms
-                WHERE current_numner_student < capacity
+                WHERE current_number_student < capacity
                 """
     try:
-        c = conn.cursor(Query)
-        c.execute()
+        c = conn.cursor()
+        c.execute(Query)
         data = c.fetchall()
         if len(data) >= 10:
             data = data[0:10]

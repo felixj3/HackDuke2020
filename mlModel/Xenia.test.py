@@ -7,7 +7,7 @@ sbert_model = InitBert()
 gmaps = InitGMapAPI()
 
 
-InsertInstance(conn, 1, 2, 4, sbert_model, gmaps)
+InsertInstance(conn, 2, 3, 4, sbert_model, gmaps)
 
 
 pass
