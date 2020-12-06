@@ -37,10 +37,20 @@ for majorStr in dataByMajors:
     # for i in range(len(coursesIdx) - 1):
     #     courses.append(majorStr[coursesIdx[i] : coursesIdx[i+1]])
 
+    lastCourseNum = 0
+
     for i in courses:
         q = re.match(r'(\d{2,3}\S*?)\. (.*?\.\s)', i)
 
         if q:
+
+            if q.group(2)[:-1].startswith('Instructor'):
+                continue
+
+            courseNum = int(re.match(r"^[0-9]+", q.group(1)).group(0))
+            if lastCourseNum > courseNum:
+                print(title.group(1), q.group(2)[:-1])
+            lastCourseNum = courseNum
 
             info = [q.group(1), q.group(2)[:-1]]
 

@@ -27,7 +27,7 @@
 <div class="inner">
     <form method="post" action="#">
         <div class="row uniform profile-form">
-            <div class ="inner">
+            <div class ="flex-center">
             <h2> Let us know you a bit better! </h2>
             </div>
             <div class="6u 12u$(xsmall)">
@@ -38,13 +38,17 @@
                 <input type="text" name="gradYear" id="gradYear" placeholder="Graduation Year (ex. 2024)"
                 value="<%= User.find_by(id: current_user.id).gradYear %>" />
             </div>
-            <div class ="inner">
+            <div class ="flex-center">
             <h2> Select your major! </h2>
             </div>
             <div class="12u$">
                 <div class="select-wrapper">
                     <select name="major" id="major" >
-                        <option value="-1"><%= "#{User.find_by(id: current_user.id).major}" %></option>
+                        <% currMajor = "Major" %>
+                        <% if User.find_by(id: current_user.id).major != nil %>
+                            <% currMajor = User.find_by(id: current_user.id).major %>
+                        <% end %>
+                        <option value="-1"><%= "#{currMajor}" %></option>
                         <% @courseAbbreviationsAndNames.each_with_index do |(subject, courses), index| %>
                             <option value= <%= "#{index}" %> ><%= subject %></option>
                         <% end %>
@@ -52,7 +56,7 @@
                 </div>
             </div>
             <!-- Break -->
-            <div class ="inner">
+            <div class ="flex-center">
             <h2> Select up to 5 clubs you are in! </h2>
             </div>
 
@@ -71,7 +75,7 @@
                 <% num = num + 1 %>
             <% end %>
             <!-- Break -->
-            <div class ="inner">
+            <div class ="flex-center">
             <h2> Select up to 5 of your favorite classes taken! </h2>
             </div>
 
@@ -80,7 +84,9 @@
             <div class="12u$">
                 <div class="field half first select-wrapper">
                     <select class="course" name= <%= "course#{num}" %> id= <%= "course#{num}" %> >
-                        <option value=""><%= "- Course #{num} -" %></option>
+                        <% currCourse = "- Course #{num} -" %>
+                        
+                        <option value="-1"><%= "- Course #{num} -" %></option>
                         <% @courseAbbreviationsAndNames.each_with_index do |(subject, courses), index| %>
                             <option value= <%= "#{index}" %> ><%= subject %></option>
                         <% end %>

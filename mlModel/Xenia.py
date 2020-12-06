@@ -64,7 +64,7 @@ def InvolvDot(conn, u1, u2):
                   category6, category7, category8, category9, category10, category11,
                   category12
                   FROM users
-                  WHERE users.id = ?""", (u1))
+                  WHERE users.id = ?""", (u2))
         u2Dat = c.fetchall()[0]
         u1Dat = [float(i)/sum(u1Dat) for i in u1Dat]
         u2Dat = [float(i)/sum(u2Dat) for i in u2Dat]
@@ -72,6 +72,46 @@ def InvolvDot(conn, u1, u2):
         for i in range(12):
             sum = sum + u1Dat[i] * u2Dat[i]
         return sum
+    except:
+        print("error")
+
+def CourseDis(conn, u1, u2, sbert_model):
+    try:
+        c = conn.cursor()
+        c.execute("""SELECT course1, course2, course3, course4, course5 
+                  FROM users
+                  WHERE users.id = ?""", (u1))
+        u1Number = c.fetchall()[0]
+        c.execute("""SELECT subject1, subject2, subject3, subject4, subject5 
+                  FROM users
+                  WHERE users.id = ?""", (u1))
+        u1Title = c.fetchall()[0]
+        u1Courses = []
+        for i in range(5):
+            course = u1Title[i] + str(u1Number[i])
+            try:
+                course[0]
+                u1Courses.append(course)
+            except:
+                continue
+        c.execute("""SELECT course1, course2, course3, course4, course5 
+                  FROM users
+                  WHERE users.id = ?""", (u2))
+        u2Number = c.fetchall()[0]
+        c.execute("""SELECT subject1, subject2, subject3, subject4, subject5 
+                  FROM users
+                  WHERE users.id = ?""", (u2))
+        u2Title = c.fetchall()[0]
+        u2Courses = []
+        for i in range(5):
+            course = u2Title[i] + str(u2Number[i])
+            try:
+                course[0]
+                u2Courses.append(course)
+            except:
+                continue
+        dist = USEModel.WordSim(u1Courses, u2Courses, sbert_model)
+        return dist
     except:
         print("error")
 
@@ -109,32 +149,15 @@ def MajorDis(conn, u1, u2, sbert_model):
     except:
         print("error")
 
-def CourseDis(conn, u1, u2, sbert_model):
-    try:
-        c = conn.cursor()
-        c.execute(""""SELECT courses
-                FROM users
-                WHERE users.id = ?""", (u1))
-        u1Dat = c.fetchall()[0].split(",")
-        
-        c.execute(""""SELECT courses
-                FROM users
-                WHERE users.id = ?""", (u2))
-        u2Dat = c.fetchall()[0].split(",")
-        dist = USEModel.WordSim(u1Dat, u2Dat, sbert_model)
-        return dist
-    except:
-        print("error")
-
 def GradDis(conn, u1, u2):
     try:
         c = conn.cursor()
-        c.execute(""""SELECT hometown
+        c.execute(""""SELECT gradYear
                 FROM users
                 WHERE users.id = ?""", (u1))
         u1Dat = c.fetchall()[0]
         
-        c.execute(""""SELECT hometown
+        c.execute(""""SELECT gradYear
                 FROM users
                 WHERE users.id = ?""", (u2))
         u2Dat = c.fetchall()[0]

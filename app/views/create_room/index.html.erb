@@ -28,7 +28,7 @@
 <div class="inner">
     <form method="post" action="#">
         <div class="row uniform">
-        <h4>What is the capacity of your room?</h4>
+        <h4 id="xrtqqqql">What is the capacity of your room?</h4>
         <select name="capacity" id="capacity">
             <option value=""></option>
             <% numberChoices.each do |k| %>
@@ -43,6 +43,8 @@
                 <% end %>
             </select>
         <h4>Briefly describe the room you are going to create.</h4>
+        <input type= "text" class="form-control" name="description" id="description">
+        <h4>Provide the zoom link for the study room here.</h4>
         <input type= "text" class="form-control" name="description" id="description">
         <div class="12u$" id="xrtqqql">
             <ul class="actions">
