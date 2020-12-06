@@ -7,6 +7,7 @@ class CreateStudyRooms < ActiveRecord::Migration[6.0]
       t.string :major
       t.string :description
       t.string :zoom_link
+      t.float :rating
 
       t.timestamps
     end
