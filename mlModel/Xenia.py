@@ -16,6 +16,7 @@ import Model
 from sentence_transformers import SentenceTransformer
 from torch.utils.data import DataLoader
 import torch
+import datetime
 
 def InitGMapAPI():
     KeyFile = open("key.txt", "r")
@@ -166,16 +167,30 @@ def GradDis(conn, u1, u2):
     except:
         print("error")
 
-def InsertInstance(conn, u1, u2, ratings, sbert_model, gmaps):
+def getUserRoom(conn, u1):
+    Query = """SELECT study_rooms.ratings
+                FROM users, study_rooms
+                WHERE users.id = ? AND study_rooms.id = users.study_room_id"""
+    c = conn.cursor()
+    c.execute(Query, (u1,))
+    ratings = c.fetchall()[0][0]
+    return ratings
+
+def InsertInstance(conn, u1, u2, sbert_model, gmaps):
     courseDis = CourseDis(conn, u1, u2, sbert_model)
     homeDis = HomeDis(conn, u1, u2, gmaps)
     majorDis = MajorDis(conn, u1, u2, sbert_model)
     gradDis = GradDis(conn, u1, u2)
     involveDot = InvolvDot(conn, u1, u2)
-    dat = ((courseDis, homeDis, majorDis, gradDis, involveDot, ratings, ))
+    ratings = getUserRoom(conn, u1)
+    dt = datetime.datetime.now()
+    instanceId = int(dt.strftime("%Y%m%d%H%M%S"))
+    dat = ((instanceId, courseDis, homeDis, majorDis, gradDis, involveDot, ratings, ))
     try:
         c = conn.cursor()
-        c.executemany("INSERT INTO feedbacks VALUES(?, ?, ?, ?, ?, ?, ?, ?)", dat)
+        c.executemany("""INSERT INTO feedbacks(id, courseDis, homeDis, 
+                      majorDis, gradDis, involvDot,rating) 
+                      VALUES(?, ?, ?, ?, ?, ?, ?, ?)""", dat)
         conn.commit()
     except:
         print("error")
