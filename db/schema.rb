@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 2020_12_06_163614) do
     t.string "major"
     t.string "description"
     t.string "zoom_link"
+    t.float "rating"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
