@@ -5,6 +5,7 @@ Created on Sat Dec  5 22:02:27 2020
 
 @author: wzy
 """
+import re
 import sqlite3
 import googlemaps
 from LocDist import calcDist
@@ -34,10 +35,8 @@ def create_connection(db_file='/db/development.sqlite3'):
         print(sqlite3.version)
     except:
         print("error")
-    finally:
-        if conn:
-            conn.close()
-
+    return conn
+    
 def getSize(conn):
     sizeQ = """" SELECT COUNT(*)
                  FROM feedbacks
@@ -57,75 +56,76 @@ def InvolvDot(conn, u1, u2):
                   category6, category7, category8, category9, category10, category11,
                   category12
                   FROM users
-                  WHERE users.id = ?""", (u1))
+                  WHERE users.id = ?""", (u1, ))
         u1Dat = c.fetchall()[0]
         
         c.execute("""SELECT category1, category2, category3, category4, category5,
                   category6, category7, category8, category9, category10, category11,
                   category12
                   FROM users
-                  WHERE users.id = ?""", (u2))
+                  WHERE users.id = ?""", (u2, ))
         u2Dat = c.fetchall()[0]
         u1Dat = [float(i)/sum(u1Dat) for i in u1Dat]
         u2Dat = [float(i)/sum(u2Dat) for i in u2Dat]
-        sum = 0
+        tot = 0
         for i in range(12):
-            sum = sum + u1Dat[i] * u2Dat[i]
-        return sum
+            tot = tot + u1Dat[i] * u2Dat[i]
+        return tot
     except:
         print("error")
 
 def CourseDis(conn, u1, u2, sbert_model):
-    try:
-        c = conn.cursor()
-        c.execute("""SELECT course1, course2, course3, course4, course5 
-                  FROM users
-                  WHERE users.id = ?""", (u1))
-        u1Number = c.fetchall()[0]
-        c.execute("""SELECT subject1, subject2, subject3, subject4, subject5 
-                  FROM users
-                  WHERE users.id = ?""", (u1))
-        u1Title = c.fetchall()[0]
-        u1Courses = []
-        for i in range(5):
-            course = u1Title[i] + str(u1Number[i])
+    c = conn.cursor()
+    c.execute("""SELECT course1, course2, course3, course4, course5 
+                FROM users
+                WHERE users.id = ?""", (u1, ))
+    u1Number = c.fetchall()[0]
+    c.execute("""SELECT subject1, subject2, subject3, subject4, subject5 
+                FROM users
+                WHERE users.id = ?""", (u1, ))
+    u1Title = c.fetchall()[0]
+    u1Courses = []
+    for i in range(5):
+        if u1Title[i]:
+            major = re.search(r'\((.+)\)', u1Title[i]).group(1)
+            course = "%s%s" % (major, u1Number[i])
             try:
                 course[0]
                 u1Courses.append(course)
             except:
                 continue
-        c.execute("""SELECT course1, course2, course3, course4, course5 
-                  FROM users
-                  WHERE users.id = ?""", (u2))
-        u2Number = c.fetchall()[0]
-        c.execute("""SELECT subject1, subject2, subject3, subject4, subject5 
-                  FROM users
-                  WHERE users.id = ?""", (u2))
-        u2Title = c.fetchall()[0]
-        u2Courses = []
-        for i in range(5):
-            course = u2Title[i] + str(u2Number[i])
+    c.execute("""SELECT course1, course2, course3, course4, course5 
+                FROM users
+                WHERE users.id = ?""", (u2, ))
+    u2Number = c.fetchall()[0]
+    c.execute("""SELECT subject1, subject2, subject3, subject4, subject5 
+                FROM users
+                WHERE users.id = ?""", (u2, ))
+    u2Title = c.fetchall()[0]
+    u2Courses = []
+    for i in range(5):
+        if u2Title[i]:
+            major = re.search(r'\((.+)\)', u2Title[i]).group(1)
+            course = "%s%s" % (major, u2Number[i])
             try:
                 course[0]
                 u2Courses.append(course)
             except:
                 continue
-        dist = USEModel.WordSim(u1Courses, u2Courses, sbert_model)
-        return dist
-    except:
-        print("error")
+    dist = USEModel.WordSim(u1Courses, u2Courses, sbert_model)
+    return dist
 
 def HomeDis(conn, u1, u2, gmaps):
     try:
         c = conn.cursor()
-        c.execute(""""SELECT hometown
+        c.execute("""SELECT hometown
                 FROM users
-                WHERE users.id = ?""", (u1))
+                WHERE users.id = ?""", (u1, ))
         u1Dat = c.fetchall()[0]
         
-        c.execute(""""SELECT hometown
+        c.execute("""SELECT hometown
                 FROM users
-                WHERE users.id = ?""", (u2))
+                WHERE users.id = ?""", (u2, ))
         u2Dat = c.fetchall()[0]
         dist = calcDist(u1Dat, u2Dat, gmaps)
         return dist
@@ -135,15 +135,15 @@ def HomeDis(conn, u1, u2, gmaps):
 def MajorDis(conn, u1, u2, sbert_model):
     try:
         c = conn.cursor()
-        c.execute(""""SELECT major
+        c.execute("""SELECT major
                 FROM users
-                WHERE users.id = ?""", (u1))
-        u1Dat = c.fetchall()[0]
+                WHERE users.id = ?""", (u1, ))
+        u1Dat = c.fetchall()[0][0]
         
-        c.execute(""""SELECT major
+        c.execute("""SELECT major
                 FROM users
-                WHERE users.id = ?""", (u2))
-        u2Dat = c.fetchall()[0]
+                WHERE users.id = ?""", (u2, ))
+        u2Dat = c.fetchall()[0][0]
         dist = USEModel.SingletSim(u1Dat, u2Dat, sbert_model)
         return dist
     except:
@@ -152,15 +152,15 @@ def MajorDis(conn, u1, u2, sbert_model):
 def GradDis(conn, u1, u2):
     try:
         c = conn.cursor()
-        c.execute(""""SELECT gradYear
+        c.execute("""SELECT gradYear
                 FROM users
-                WHERE users.id = ?""", (u1))
-        u1Dat = c.fetchall()[0]
+                WHERE users.id = ?""", (u1, ))
+        u1Dat = c.fetchall()[0][0]
         
-        c.execute(""""SELECT gradYear
+        c.execute("""SELECT gradYear
                 FROM users
-                WHERE users.id = ?""", (u2))
-        u2Dat = c.fetchall()[0]
+                WHERE users.id = ?""", (u2, ))
+        u2Dat = c.fetchall()[0][0]
         dist = u1Dat - u2Dat
         return dist
     except:
@@ -172,10 +172,10 @@ def InsertInstance(conn, u1, u2, ratings, sbert_model, gmaps):
     majorDis = MajorDis(conn, u1, u2, sbert_model)
     gradDis = GradDis(conn, u1, u2)
     involveDot = InvolvDot(conn, u1, u2)
-    dat = ((courseDis, homeDis, majorDis, gradDis, involveDot, ratings))
+    dat = ((courseDis, homeDis, majorDis, gradDis, involveDot, ratings, ))
     try:
         c = conn.cursor()
-        c.executemany("INSERT INTO feedbacks VALUES(?, ?, ?, ?, ?, ?)", dat)
+        c.executemany("INSERT INTO feedbacks VALUES(?, ?, ?, ?, ?, ?, ?, ?)", dat)
         conn.commit()
     except:
         print("error")
