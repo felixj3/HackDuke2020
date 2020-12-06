@@ -7,6 +7,7 @@ class RequestTutorController < ApplicationController
         end
         puts(params[:name])
         
+        
     end
 
     def index
