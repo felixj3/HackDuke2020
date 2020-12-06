@@ -25,6 +25,7 @@
                 <input type="text" name="name" id="demo-name" value="" placeholder="Name" />
             </div>
             <!-- Break -->
+
             <div class ="inner">
             <h2> Select up to 5 Clubs you are in! </h2>
             </div>
@@ -33,10 +34,10 @@
             <% while num < 6 do %>
             <div class="12u$">
                 <div class="select-wrapper">
-                    <select name="club1" id="club1">
+                    <select name= <%= "club#{num}" %> id= <%= "club#{num}" %> >
                         <option value=""><%= "- Club #{num} -" %></option>
-                        <% @clubs.each do |club| %>
-                            <option value="1"><%= club %></option>
+                        <% @clubs.each_with_index do |club, index| %>
+                            <option value= <%= "#{index}" %> ><%= club %></option>
                         <% end %>
                     </select>
                 </div>
@@ -44,36 +45,10 @@
                 <% num = num + 1 %>
             <% end %>
             <!-- Break -->
-            <div class="4u 12u$(small)">
-                <input type="radio" id="demo-priority-low" name="demo-priority" checked>
-                <label for="demo-priority-low">Low Priority</label>
-            </div>
-            <div class="4u 12u$(small)">
-                <input type="radio" id="demo-priority-normal" name="demo-priority">
-                <label for="demo-priority-normal">Normal Priority</label>
-            </div>
-            <div class="4u$ 12u$(small)">
-                <input type="radio" id="demo-priority-high" name="demo-priority">
-                <label for="demo-priority-high">High Priority</label>
-            </div>
-            <!-- Break -->
-            <div class="6u 12u$(small)">
-                <input type="checkbox" id="demo-copy" name="demo-copy">
-                <label for="demo-copy">Email me a copy of this message</label>
-            </div>
-            <div class="6u$ 12u$(small)">
-                <input type="checkbox" id="demo-human" name="demo-human" checked>
-                <label for="demo-human">I am a human and not a robot</label>
-            </div>
-            <!-- Break -->
-            <div class="12u$">
-                <textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-            </div>
-            <!-- Break -->
             <div class="12u$">
                 <ul class="actions">
-                    <li><input type="submit" value="Send Message" /></li>
-                    <li><input type="reset" value="Reset" class="alt" /></li>
+                    <li><input type="submit" value="Update Profile" /></li>
+                    <li><input type="reset" value="Reset" /></li>
                 </ul>
             </div>
         </div>
