@@ -31,7 +31,25 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.0]
       # t.integer  :failed_attempts, default: 0, null: false # Only if lock strategy is :failed_attempts
       # t.string   :unlock_token # Only if unlock strategy is :email or :both
       # t.datetime :locked_at
+      
+      # added by Felix
+      # in alphabetical order
+      t.integer :category1
+      t.integer :category2
+      t.integer :category3
+      t.integer :category4
+      t.integer :category5
+      t.integer :category6
+      t.integer :category7
+      t.integer :category8
+      t.integer :category9
+      t.integer :category10
+      t.integer :category11
+      t.integer :category12
 
+      t.string :name
+
+      t.belongs_to :study_room
 
       t.timestamps null: false
     end
