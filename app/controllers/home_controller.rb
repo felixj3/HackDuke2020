@@ -31,19 +31,25 @@ class HomeController < ApplicationController
     session.each do |k,v|
       puts "key: #{k} value: #{v}"
     end
+    getClubs
     puts("----------------------------------------\n")
-    @userClubs = Array.new
+    @userClubs = ["", "", "", "", ""]
     user_id = params[:user_id]
     clubIndex = 1
     params.each do |k,v|
         puts "key: #{k} value: #{v}"
         if v != "" and k.to_s.include? "club"
           puts "#{v} is not null and is a club"
-          @userClubs << v
+
+          @userClubs[clubIndex - 1] = @clubs[v.to_i]
+          clubIndex = clubIndex + 1
         end
     end
 
-    getClubs
+    @userClubs.each do |c|
+      puts c
+    end
+
     categories = [0,0,0,0,0,0,0,0,0,0,0,0] # how many clubs user has under each category
     @categoryAndClubs.each_with_index do |(category, clubs), index|
       @userClubs.each do |club|
@@ -61,6 +67,8 @@ class HomeController < ApplicationController
     # above code puts how many clubs the user does in each category, using the categories array
     user = User.find_by(id: user_id)
     user.update(category1: categories[0], category2: categories[1], category3: categories[2], category4: categories[3], category5: categories[4], category6: categories[5], category7: categories[6], category8: categories[7], category9: categories[8], category10: categories[9], category11: categories[10], category12: categories[11], name: params[:name])
+
+    # user.update(club1: @userClubs[0], club2: @userClubs[1], club3: @userClubs[2], club4: @userClubs[3], club5: @userClubs[4],)
 
     getCourses
     courseNames = @courseAbbreviationsAndNames.keys
