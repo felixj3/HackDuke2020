@@ -62,13 +62,25 @@ class HomeController < ApplicationController
     user.update(category1: categories[0], category2: categories[1], category3: categories[2], category4: categories[3], category5: categories[4], category6: categories[5], category7: categories[6], category8: categories[7], category9: categories[8], category10: categories[9], category11: categories[10], category12: categories[11], name: params[:name])
 
     getCourses
-    # @courseAbbreviationsAndNames
+    courseNames = @courseAbbreviationsAndNames.keys
+    userCourses = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    # userCourses[2i] = subject(i+1)
+    # userCourses[2i+1] = course(i+1)
     params.each do |k, v|
       puts "key: #{k}, value: #{v}"
+      
     end
 
+    if params[:major].to_i != -1
+      user.update(major: courseNames[params[:major].to_i])
+    end
+
+    if params[:gradYear] != ""
+      user.update(gradYear: params[:gradYear])
+    end
     # user.update(subject1: , course1: )
 
+    user.save
     redirect_to root_url
   end
 
