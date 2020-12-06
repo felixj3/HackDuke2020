@@ -15,7 +15,7 @@ def log(msg):
     
 
 parser = argparse.ArgumentParser()
-parser.add_argument('-p', type=int, help='port to listen on', default=5000)
+parser.add_argument('-p', type=int, help='port to listen on', default=8000)
 args = parser.parse_args()
 port = args.p
 
@@ -62,13 +62,11 @@ class JobServerHandler(tornado.web.RequestHandler):
         self.write(payload)
 
     def post(self):
-        data = self.get_body_argument("resultData", None)
-        if data:
-            dataQueue.put({
-                'data': data,
-                'idx': int(self.get_body_argument("idx"))
-            })
-        self.get()
+        data = self.get_body_argument("data", None)
+        data = json.loads(data)
+        data['acd'] = 4563
+        self.write(data)
+        # self.get()
 
 
 app = tornado.web.Application([
