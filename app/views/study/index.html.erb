@@ -14,5 +14,33 @@
 
 
 <section class="banner find-study-room subbanner" >
-<h2 color="white">Study</h2>
+<h2 color="white">Study: Join a Room</h2>
 </section>
+
+<div class="row gallery">
+	
+	<% @rooms.each do |room| %>
+	<div class="col-lg-3 col-md-4 col-sm-6 gallery-box card">
+		
+		<div class="card-body">
+			<div class="card-title"><h5><%=  %></h5></div>
+			<div class="card-content">
+				
+				<p>
+				    <h5>Major: </h5><%= room.major%><br>
+				    <h5>Capacity:</h5><%= room.capacity%><br>
+				    <h5>Number of People:</h5><%= room.current_number_student%><br>
+				
+				</p> 
+			</div>
+			<div class="card-button">
+				<a class="button">Join!</a>
+			</div>
+			
+			
+		</div>
+	</div>
+		
+	<% end %>
+	
+</div>
