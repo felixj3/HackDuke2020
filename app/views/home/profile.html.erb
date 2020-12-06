@@ -27,7 +27,7 @@
 <div class="inner">
     <form method="post" action="#">
         <div class="row uniform profile-form">
-            <div class ="flex-center">
+            <div class ="inner flex-center">
             <h2> Let us know you a bit better! </h2>
             </div>
             <div class="6u 12u$(xsmall)">
@@ -38,7 +38,12 @@
                 <input type="text" name="gradYear" id="gradYear" placeholder="Graduation Year (ex. 2024)"
                 value="<%= User.find_by(id: current_user.id).gradYear %>" />
             </div>
-            <div class ="flex-center">
+            <div class="12u$">
+                <input type="text" name="hometown" id="hometwon"
+                placeholder="Hometown (ex. Durham, NC)"
+                value="<%= User.find_by(id: current_user.id).hometown %>" />
+            </div>
+            <div class ="inner flex-center">
             <h2> Select your major! </h2>
             </div>
             <div class="12u$">
@@ -56,7 +61,7 @@
                 </div>
             </div>
             <!-- Break -->
-            <div class ="flex-center">
+            <div class ="inner flex-center">
             <h2> Select up to 5 clubs you are in! </h2>
             </div>
 
@@ -75,7 +80,7 @@
                 <% num = num + 1 %>
             <% end %>
             <!-- Break -->
-            <div class ="flex-center">
+            <div class ="inner flex-center">
             <h2> Select up to 5 of your favorite classes taken! </h2>
             </div>
 
