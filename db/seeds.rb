@@ -6,9 +6,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-cat = User.getCategories
-club = User.getClubs(cat)
-User.test
+# cat = User.getCategories
+# club = User.getClubs(cat)
+# club.each do |k, v|
+#     puts "#{k}, #{v}"
+# end
+# User.test
 
 
 User.create(email: "hi@gmail.com")

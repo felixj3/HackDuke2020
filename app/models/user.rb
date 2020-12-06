@@ -34,6 +34,7 @@ class User < ApplicationRecord
     end
 
     def self.test
+        puts "hello"
         User.create(email: "TESTWorked@gmail.com")
     end
 end
