@@ -1759,6 +1759,11 @@
 	.align-right {
 		text-align: right;
 	}
+	
+	.flex-center {
+		flex: 0 0 100%;
+		text-align: center;
+	}
 
 	.inner {
 		max-width: 75em;

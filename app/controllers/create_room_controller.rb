@@ -5,6 +5,8 @@ class CreateRoomController < ApplicationController
 
   def post
     room = StudyRoom.create(rank: 0, capacity: params[:capacity].to_i, current_number_student:1, major: params[:major], description: params[:description])
+    user = User.find_by(id: params[:user_id])
+    user.StudyRoom << room
     redirect_to root_url
   end
 

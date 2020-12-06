@@ -7,3 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
+
+User.create(email: "hi@gmail.com")
+Tutor.create(subject: "MATH", number: "221", grade: "A", availability: "3", pay: "15")
+Tutor.create(subject: "CS", number: "221", grade: "A", availability: "3", pay: "15")
+Tutor.create(subject: "PHILO", number: "221", grade: "A", availability: "3", pay: "15")
+# StudyRoom.create(rank: 5, number_student: 10)
