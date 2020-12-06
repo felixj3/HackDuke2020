@@ -15,15 +15,19 @@ class BecomeTutorController < ApplicationController
 
     # POST /assist
     def post
+        puts "------------TUTOR SAVE~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
         params.each do |k,v|
             puts "key: #{k}, value: #{v}"
         end
         getCourses
         keys = @courseAbbreviationsAndNames.keys
-        tutor = Tutor.create(subject: keys[params[:subject].to_i], number: params[:courseNum], grade: params[:Grade], availability: params[:availability], pay: params[:Pay])
+        tutor = Tutor.create(subject: keys[params[:major].to_i], number: params[:courseNum], grade: params[:Grade], availability: params[:availability], pay: params[:Pay])
         user = User.find_by(id: params[:user_id])
+        tutor.save()
         user.tutors << tutor # relation between tutor and user
         # render :controller => 'home', :action => 'index'
+        user.save()
+        
         redirect_to root_url
     end
 

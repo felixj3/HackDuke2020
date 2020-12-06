@@ -6,9 +6,13 @@ class RequestTutorController < ApplicationController
             puts "key: #{k} value: #{v}"
         end
         puts(params[:name])
-        
-        
+        filter
+        render "index"
     end
+
+    # def filter
+    #     @tutors
+    # end 
 
     def index
         @tutors = Tutor.order('created_at DESC')

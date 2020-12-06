@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get "study" => "study#index"
   post "/assist" => "become_tutor#post" # for submitting tutor form
   post "/profile" => "home#post" # for updating profile
-  post "/request" => "request_tutor#post" # for submitting tutor form
+  post "/request" => "request_tutor#post" # for submitting request form
   get "profile" => "home#profile"
   get "newroom" => "create_room#index"
   post "/newroom" => "create_room#post"
