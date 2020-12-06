@@ -15,11 +15,12 @@ with open("courses_raw.json", 'r') as json_file:
 rec = {}
 for major in course_li:
     majorAbbrev = major[0]
+    majorName = major[0][0:major[0].find("(")-1]
     majorAbbrev = majorAbbrev[majorAbbrev.find("(")+1:majorAbbrev.find(")")]
     courses = major[1]
     for course in courses:
         courseNum = re.sub('[^0-9]','', course[0])
-        courseTitle = course[1]
+        courseTitle =majorName + ": " + course[1]
         courseAbbrev = majorAbbrev + str(courseNum)
         rec[courseAbbrev] = courseTitle
 
