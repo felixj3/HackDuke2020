@@ -44,7 +44,11 @@
             <div class="12u$">
                 <div class="select-wrapper">
                     <select name="major" id="major" >
-                        <option value="-1"><%= "#{User.find_by(id: current_user.id).major}" %></option>
+                        <% currMajor = "Major" %>
+                        <% if User.find_by(id: current_user.id).major != nil %>
+                            <% currMajor = User.find_by(id: current_user.id).major %>
+                        <% end %>
+                        <option value="-1"><%= "#{currMajor}" %></option>
                         <% @courseAbbreviationsAndNames.each_with_index do |(subject, courses), index| %>
                             <option value= <%= "#{index}" %> ><%= subject %></option>
                         <% end %>
@@ -80,7 +84,9 @@
             <div class="12u$">
                 <div class="field half first select-wrapper">
                     <select class="course" name= <%= "course#{num}" %> id= <%= "course#{num}" %> >
-                        <option value=""><%= "- Course #{num} -" %></option>
+                        <% currCourse = "- Course #{num} -" %>
+                        
+                        <option value="-1"><%= "- Course #{num} -" %></option>
                         <% @courseAbbreviationsAndNames.each_with_index do |(subject, courses), index| %>
                             <option value= <%= "#{index}" %> ><%= subject %></option>
                         <% end %>
