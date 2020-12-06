@@ -2,12 +2,17 @@ class BecomeTutorController < ApplicationController
     # GET /assist
     def index
         # called before form is filled out
+        user = getCurrentUser
+        puts user.name
         getCourses
         @curr_user_id = current_user.id
     end
 
     # POST /assist
     def post
+        params.each do |k,v|
+            puts "key: #{k}, value: #{v}"
+        end
     end
 
     def getCourses

@@ -10,4 +10,8 @@ class ApplicationController < ActionController::Base
         res = Net::HTTP.post_form(uri, 'data' => dict.to_json)
         return JSON.parse(res.body)
     end
+
+    def getCurrentUser
+        return User.find_by(id: current_user.id)
+    end
 end
